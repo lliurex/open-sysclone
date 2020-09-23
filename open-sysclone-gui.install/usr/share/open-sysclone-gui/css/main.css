@@ -1,0 +1,158 @@
+body{
+	background-color: rgba(240,240,240,1);
+	font-family:sans-serif;
+	padding: 0;
+	background-image: url('file:////usr/share/open-sysclone-gui/img/background_banner_main.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100vh;
+	height: calc(100vh * 9/16);
+	margin:0 auto;
+ 
+}
+
+
+.myform{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: rgba(66,66,66,0.7);
+	margin-left:0%;
+	margin-right:0%;
+	margin-bottom:0%;
+	margin-top:18vh;
+	padding: 2vh;
+}
+
+.myform input[type=text]{
+	width: 100%;
+	border-radius: 3vh;
+	padding: 2vh;
+}
+
+.myform .right{
+width: 100%;
+text-align: right;
+}
+
+.myform .center{
+width: 100%;
+text-align: center;
+}
+
+
+
+.exit{
+	cursor: pointer;
+}
+
+ul { 
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+}
+a { 
+	text-decoration: none; 
+}
+
+ul li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+ul li img{
+	width: 80px;
+}
+
+.textinfo{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+
+.optiontitle{
+	font-weight: bolder;
+	font-size: 130%;
+	color: white;
+}
+
+.optiondescription{
+	color: #03c6e4;
+	font-size: 100%;
+}
+
+#onhover {
+  display: none;
+}
+
+
+#menu li:hover span[id="initial"]{
+	display:none;
+}
+
+#menu li:hover span[id="onhover"]{
+	display:block;
+}
+
+#menu li:hover div{
+	border-radius: 6px;
+	background-color: rgba(66,66,66,0.4);
+}
+
+
+/*ul li img a,ul li div a{
+	display: inline;
+}*/
+
+/*ul li div h3{
+text-align: left;
+vertical-align: middle;
+padding-left:5px;
+margin-bottom: 0px;
+position: relative;
+}
+
+ul li div div{
+color: rgba(128,128,128,255);
+text-align: left;
+margin-top: 0px;
+padding-left:5px;
+vertical-align: top;
+font-size:70%;
+	}*/
+
+/*.service-list {
+list-style-type: none;
+margin-left:0px;
+padding-left:0px;
+}
+
+.service-list li
+{
+display:inline-block;
+list-style-type: none;
+}
+
+.service-list img
+{
+float:left;
+}
+
+.service-list h3 {
+text-align: left;
+vertical-align: middle;
+padding-left:5px;
+margin-bottom: 0px;
+}
+
+.service-list p {
+color: rgba(128,128,128,255);
+text-align: left;
+margin-top: 0px;
+padding-left:5px;
+vertical-align: top;
+font-size:70%;
+}
+*/

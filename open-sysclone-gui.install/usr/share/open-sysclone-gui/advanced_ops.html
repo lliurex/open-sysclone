@@ -1,0 +1,86 @@
+<html>
+<!--  http://www.webresourcesdepot.com/free-jquery-ui-themes-collection/ -->
+<head>
+	<link rel="stylesheet" href="css/section.css">
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	
+	
+	<!--OWNER-->
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/advanced_ops.js"></script>
+	<script type="text/javascript" src="js/combobox_1.js"></script>
+
+</head>
+<body>
+
+	<div id="content">
+		<div class="bannerbox">
+			<img value="advanced_ops" src="img/advanced_options_banner.png" alt="advanced_ops">
+			<div class="textinfo">
+				<div class="optiontitle">
+					<script type="text/javascript">document.write(i18n.gettext("advanced_ops.advanced_ops"));</script>
+				</div>	
+				<div class="optiondescription">
+					<script type="text/javascript">document.write(i18n.gettext("advanced_ops.description"));</script>
+				</div>
+			</div>
+		</div>
+		
+		<div id="myform">
+			<div class="content-form">
+				<div>
+					<div class="group">
+						<div class="custom-select" style="width:400px;">
+							<select required="required" name="protocol" id="protocol">
+								<option>Select protocol mode</option>
+								<option value="tftp"><script type="text/javascript">document.write(i18n.gettext("tftp"));</script></option>
+								<option value="http"><script type="text/javascript">document.write(i18n.gettext("http"));</script></option>
+							</select>
+							<label><script type="text/javascript">document.write(i18n.gettext("advanced_ops.protocol"));</script> <img src="img/question.png" height="15px" width="15" title="If your system has any problem with squashfs in tftp mode you can change it to http mode. This mode is more slowly but you can use it."/></label>
+						</div>
+					</div>
+				</div>
+				<div class="align-right">
+					<div>
+						<span id="goback_make">
+							<span id="initial_back"><img src="img/back_arrow.png" height="25px" width="25" title="Back to before section"/></span>
+							<span id="onhover_back"><img src="img/back_arrow_blue.png" height="25px" width="25" title="Back to before section"/></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="action-form">
+				<div class="btn-box">
+					<button id="apply_advanced_ops" class="btn btn-submit" type="submit"><script>document.write(i18n.gettext("done"));</script></button>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div id='result'></div>
+		</div>
+
+
+
+
+
+		<!-- <div class="myform">
+			<label class="customlabel"><script type="text/javascript">document.write(i18n.gettext("advanced_ops.protocol"));</script> <img src="img/question.png" height="25px" width="25" title="If your system has any problem with squashfs in tftp mode you can change it to http mode. This mode is more slowly but you can use it."/></label>
+			<br>
+			<select class="custominput" name="protocol" id="protocol">
+				<option value="tftp"><script type="text/javascript">document.write(i18n.gettext("tftp"));</script></option>
+				<option value="http"><script type="text/javascript">document.write(i18n.gettext("http"));</script></option>
+			</select>
+			<br>
+			<div class="right">
+				<button id="apply_advanced_ops"><script type="text/javascript">document.write(i18n.gettext("done"));</script></button>
+			</div>
+			<div id='result' style='margin-top:10px'></div>
+		</div> -->
+		<!-- <h4 class="goback" id="goback_make"><script type="text/javascript">document.write(i18n.gettext("go_back"));</script></h4> -->
+	</div>
+</body>
+</html>

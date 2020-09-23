@@ -1,0 +1,27 @@
+{
+  "name": "open-sysclone",
+  "main": "login.html",
+  "window": {
+    "title": "OpenSysClone",
+    "icon": "img/open-sysclone.png",
+    "width": 805,
+    "height": 690,
+    "max_width": 805,
+    "max_height": 690,
+    "frame": true,
+    "toolbar":true,
+    "resizable": false,
+    "fullscreen": false
+    },
+  "webkit": {
+    "plugin":true 
+  },
+  "chromium-args": "--ignore-certificate-errors --user-data-dir='/tmp/.chromium_open'"
+  
+  /*
+  https://github.com/rogerwang/node-webkit/wiki/Manifest-format
+  http://src.chromium.org/svn/trunk/src/content/public/common/content_switches.cc
+  */
+  
+  
+}

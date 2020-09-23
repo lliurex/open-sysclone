@@ -1,0 +1,111 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/section.css">
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/combobox_1.js"></script>
+	<script type="text/javascript" src="js/rescuepxe_floppy.js"></script>
+	
+</head>
+	
+<body>
+	<!--BANNER Titulo y Descripcion-->
+ 	<div id="content">
+		<div class="bannerbox">
+			<img value="make_image" src="img/gestion_menu_pxe.png" alt="Make Image">
+			<div class="textinfo">
+				<div class="optiontitle">
+					<script type="text/javascript">document.write(i18n.gettext("main.rescuepxe"));</script>
+				</div>	
+				<div class="optiondescription">
+					<script type="text/javascript">document.write(i18n.gettext("rescuepxe.description"));</script>
+				</div>
+			</div>
+		</div>
+		<!--Formulario a rellenar con los botones-->
+		<div id="myform">
+			<div class="content-form">
+				<div>
+					<label class="customlabel" style="top:15px;"><script type="text/javascript">document.write(i18n.gettext("rescuepxe.select_floppy"));</script> <img src="img/question.png" height="15px" width="15" title="Now you format your diskette with rescue PXE boot ISO"/></label>
+				</div>
+				<!--Botones de regreso y de opciones avanzadas-->
+				<div class="align-right">
+					<div>
+						<span id="goback2">
+							<span id="initial_back"><img src="img/back_arrow.png" height="25px" width="25" title="Back to main section"/></span>
+							<span id="onhover_back"><img src="img/back_arrow_blue.png" height="25px" width="25" title="Back to main section"/></span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<!--Boton de ejecucion del formulario-->
+			<div class="action-form-center">
+				<div class="btn-box">
+					<button id="rescuepxe_floppy" class="btn btn-submit" type="submit" style="margin-top:40px;"><script>document.write(i18n.gettext("done"));</script></button>
+				</div>
+			</div>
+			
+		</div>
+		<!--formulario del resultado-->
+		<div>
+			<div id='result'></div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+
+<head>
+    <link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/section.css">
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	
+	
+
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/rescuepxe_floppy.js"></script>
+
+</head>
+<body>
+
+	<div id="content">
+		<h1><script type="text/javascript">document.write(i18n.gettext("main.rescuepxe"));</script></h1>	
+		<h5><script type="text/javascript">document.write(i18n.gettext("rescuepxe.description"));</script></h5>
+		<div class="myform">
+			<label class="customlabel"><script type="text/javascript">document.write(i18n.gettext("rescuepxe.select_floppy"));</script> <img src="img/question.png" height="25px" width="25" title="Now you format your diskette with rescue PXE boot ISO"/></label>
+			<br>
+			<div class="right">
+				<button id="rescuepxe_floppy"><script type="text/javascript">document.write(i18n.gettext("done"));</script></button>
+			</div>
+			<div id='result' style='margin-top:10px'></div>
+		</div>
+		<h4 class="goback" id="goback_floppy"><script type="text/javascript">document.write(i18n.gettext("go_back"));</script></h4>
+	</div>
+</body>
+</html> -->

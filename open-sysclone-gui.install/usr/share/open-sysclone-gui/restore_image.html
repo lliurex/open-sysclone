@@ -1,0 +1,136 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/section.css">
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/restore_image.js"></script>	
+	<script type="text/javascript" src="js/combobox_1.js"></script>
+	
+</head>
+<body>
+	<div id="content">
+		<div class="bannerbox">
+			<img value="Restore Image" src="img/restauracion_imagen_banner.png" alt="Restore Image">
+			<div class="textinfo">
+				<div class="optiontitle">
+					<script type="text/javascript">document.write(i18n.gettext("restore_image.restore_image"));</script>
+				</div>	
+				<div class="optiondescription">
+					<script type="text/javascript">document.write(i18n.gettext("restore_image.description"));</script>
+				</div>
+			</div>
+		</div>
+
+		<div id="myform">
+			<div class="content-form">
+				<div>
+					<div class="group">
+						<div class="customlabel">							
+							<div class="custom-select" style="width:220px;">
+								<select required="required" name="imagename" id="imagename"></select>
+								<label>
+									<script type="text/javascript">document.write(i18n.gettext("image_name"));</script> <img src="img/question.png" height="15px" width="15" title="You can choose the Images created by Open-SysClone in server and saved it in /net/OpenSysClone/imagenes"/>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="group">
+						<div class="customlabel">
+							<input type="text" required="required" id="imagehdd" class="custominput" value="sda"/><span class="highlight"></span><span class="bar"></span>
+							<label style="width:370px;" id="large"><script type="text/javascript">document.write(i18n.gettext("restore_image.hard_disk"));</script> <img src="img/question.png" height="15px" width="15" title="Usually the hard disk to restore image is sda but you can change it if you are sure that the system to restore is in other device"/></label>
+						</div>
+					</div>
+					<div class="customlabel">							
+						<div class="custom-select" style="width:420px;">
+							<select required="required" name="hostoperation" id="hostoperation">
+								<option value="hostnamesaver.sh"><script type="text/javascript">document.write(i18n.gettext("restore_image.maintain"));</script></option>
+								<option value="hostnamesaver.sh"><script type="text/javascript">document.write(i18n.gettext("restore_image.maintain"));</script></option>
+								<option value="hostnamesaverip.sh"><script type="text/javascript">document.write(i18n.gettext("restore_image.new_name"));</script></option>
+							</select>
+							<label>
+								<script type="text/javascript">document.write(i18n.gettext("restore_image.hostname"));</script> <img src="img/question.png" height="15px" width="15" title="You can mantain the original name of the computer before restore the system or change it with a new name, if you wouldn't change it you could have some computers with same name"/>
+							</label>
+						</div>
+					</div>
+					<div class="group">
+						<div class="customlabel">							
+							<div class="custom-select" style="width:150px;">
+								<select required="required" name="finaloperation" id="finaloperation">
+									<option value="poweroff"><script type="text/javascript">document.write(i18n.gettext("shutdown"));</script></option>
+									<option value="poweroff"><script type="text/javascript">document.write(i18n.gettext("shutdown"));</script></option>
+									<option value="reboot"><script type="text/javascript">document.write(i18n.gettext("reboot"));</script></option>
+								</select>
+								<label>
+									<script type="text/javascript">document.write(i18n.gettext("final_operation"));</script> <img src="img/question.png" height="15px" width="15" title="You can mantain the original name of the computer before restore the system or change it with a new name, if you wouldn't change it you could have some computers with same name"/>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="align-right">
+					<div>
+						<span id="goback2">
+							<span id="initial_back"><img src="img/back_arrow.png" height="25px" width="25" title="Back to main section"/></span>
+							<span id="onhover_back"><img src="img/back_arrow_blue.png" height="25px" width="25" title="Back to main section"/></span>
+						</span>
+					</div>
+					<div>
+						<span id="advanced_ops">
+							<span id="initial"><img src="img/advanced_options.png" height="25px" width="25" title="Access for advanced options"/></span>
+							<span id="onhover"><img src="img/advanced_options_blue.png" height="25px" width="25" title="Access for advanced options"/></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="action-form">
+				<div class="btn-box">
+					<button id="restoreimage" class="btn btn-submit" type="submit"><script>document.write(i18n.gettext("done"));</script></button>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div id='result'></div>
+		</div>
+
+
+
+
+		<!-- <h1><script type="text/javascript">document.write(i18n.gettext("restore_image.restore_image"));</script></h1>
+		<h5><script type="text/javascript">document.write(i18n.gettext("restore_image.description"));</script></h5>
+
+		<div class="myform">
+			<label><script type="text/javascript">document.write(i18n.gettext("image_name"));</script><img src="img/question.png" height="25px" width="25" title="You can choose the Images created by Open-SysClone in server and saved it in /net/OpenSysClone/imagenes"/></label>
+			<select name="imagename" id="imagename"></select>
+			<br>
+			<label><script type="text/javascript">document.write(i18n.gettext("restore_image.hard_disk"));</script><img src="img/question.png" height="25px" width="25" title="Usually the hard disk to restore image is sda but you can change it if you are sure that the system to restore is in other device"/></label>
+			<input id="imagehdd" type="text" value="sda"/>
+			<br>
+			<label><script type="text/javascript">document.write(i18n.gettext("restore_image.hostname"));</script><img src="img/question.png" height="25px" width="25" title="You can mantain the original name of the computer before restore the system or change it with a new name, if you wouldn't change it you could have some computers with same name"/></label>
+			<select name="hostoperation" id="hostoperation">
+				<option value="hostnamesaver.sh"><script type="text/javascript">document.write(i18n.gettext("restore_image.maintain"));</script></option>
+				<option value="hostnamesaverip.sh"><script type="text/javascript">document.write(i18n.gettext("restore_image.new_name"));</script></option>
+			</select>
+			<br>
+			<label><script type="text/javascript">document.write(i18n.gettext("final_operation"));</script><img src="img/question.png" height="25px" width="25" title="When Open-SysClone ends the operations it can shutdown the computer or reboot it."/></label>
+			<select name="finaloperation" id="finaloperation">
+				<option value="poweroff"><script type="text/javascript">document.write(i18n.gettext("shutdown"));</script></option>
+				<option value="reboot"><script type="text/javascript">document.write(i18n.gettext("reboot"));</script></option>
+			</select>
+			<br>
+			<div class="right">
+				<button id="restoreimage"><script type="text/javascript">document.write(i18n.gettext("done"));</script></button>
+			</div>
+			<div id='result' style='margin-top:10px'></div>
+		</div>
+		<br>
+		<h4 class="advanced_ops" id="advanced_ops"><script type="text/javascript">document.write(i18n.gettext("advanced_ops.advanced_ops"));</script></h4>
+		<h4 class="goback" id="goback"><script type="text/javascript">document.write(i18n.gettext("go_back"));</script></h4> -->
+	</div>
+
+
+	
+</body>
+</html>

@@ -1,0 +1,11 @@
+[SETUP]
+type=python
+path=OpenSysCloneRescue.py
+class=OpenSysCloneRescue
+[METHODS]
+get_devices = anonymous
+rescuepxe_floppy = admin,admins,adm
+rescuepxe_usb = admin,admins,adm
+rescuepxe_cdrom = admin,admins,adm
+rescuepxe_cdrom_test = admin,admins,adm
+rescuepxe_cdrom_blank_test= admin,admins,adm

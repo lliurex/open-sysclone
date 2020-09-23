@@ -1,0 +1,39 @@
+<html>
+<!--  http://www.webresourcesdepot.com/free-jquery-ui-themes-collection/ -->
+<head>
+    <link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/section.css">
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	
+	
+	<!--OWNER-->
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/rescuepxe_uservalidate.js"></script>
+
+</head>
+<body>
+
+	<div id="content">
+		<h1><script type="text/javascript">document.write(i18n.gettext("main.rescuepxe"));</script></h1>	
+		<h5><script type="text/javascript">document.write(i18n.gettext("rescuepxe.description"));</script></h5>
+		<div class="myform">
+			<br>
+			<label class="customlabel"><script type="text/javascript">document.write(i18n.gettext("rescuepxe.uservalidate.name"));</script> <img src="img/question.png" height="25px" width="25" title="Insert valid user in this local machine"/></label>
+			<br>
+			<input class="custominput" id="localuser" type="text"/>
+			<br>
+			<label class="customlabel"><script type="text/javascript">document.write(i18n.gettext("rescuepxe.uservalidate.passwd"));</script> <img src="img/question.png" height="25px" width="25" title="Insert the password for valid user"/></label>
+			<br>
+			<input class="custominput" id="localpasswd" type="password"/>
+			<br>
+				<button id="uservalidate"><script type="text/javascript">document.write(i18n.gettext("done"));</script></button>
+			<div id='result' style='margin-top:10px'></div>
+			</div>
+		</div>
+		<h4 class="goback" id="goback"><script type="text/javascript">document.write(i18n.gettext("go_back"));</script></h4>
+	</div>
+</body>
+</html>

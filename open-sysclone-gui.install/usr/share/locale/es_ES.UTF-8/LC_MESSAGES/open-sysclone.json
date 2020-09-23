@@ -1,0 +1,382 @@
+{
+   "login.username":{
+  	"message":"Usuario",
+  	"description":""
+  },
+   "login.password":{
+  	"message":"Contraseña",
+  	"description":""
+  },
+  "login.server":{
+    "message":"Servidor",
+    "description":""
+  },
+    "image_name":{
+    "message":"Nombre de la Imagen ",
+    "description":""
+  },
+   "enter":{
+  	"message":"Entrar",
+  	"description":""
+  },
+    "final_operation":{
+    "message":"Operación Final",
+    "description":""
+  },
+     "shutdown":{
+    "message":"Apagar",
+    "description":""
+  },
+    "reboot":{
+    "message":"Reiniciar",
+    "description":""
+  },
+    "done":{
+    "message":"Realizar",
+    "description":""
+  },
+    "go_back":{
+    "message":"Volver",
+    "description":""
+  },
+    "main.make_image":{
+    "message":"Hacer Imagen",
+    "description":""
+  },
+      "main.make_image_description":{
+    "message":"Realiza la copia de un equipo en el server",
+    "description":""
+  },
+    "main.restore_image":{
+    "message":"Restaurar Imagen",
+    "description":""
+  },
+    "main.restore_image_description":{
+    "message":"Copia la imagen a un cliente",
+    "description":""
+  },
+    "main.restore_image_multicast":{
+    "message":"Restaurar Imagen Multicast",
+    "description":""
+  },
+      "main.restore_image_multicast_description":{
+    "message":"Copia la imagen a varios clientes a la vez",
+    "description":""
+  },
+    "main.delete_image":{
+    "message":"Borrar Imagen del Servidor",
+    "description":""
+  },
+      "main.delete_image_description":{
+    "message":"Elimina una imagen creada anteriormente",
+    "description":""
+  },
+    "main.delete_pxe_menu":{
+    "message":"Borrar Entrada Menu PXE",
+    "description":""
+  },
+    "main.bootmanager":{
+    "message":"Opciones sobre PXE",
+    "description":""
+  },
+    "main.bootmanager_description":{
+    "message":"Gestion del menú PXE, borrado y rescate",
+    "description":""
+  },
+    "main.networkiso":{
+    "message":"Servir ISO por red",
+    "description":""
+  },
+      "main.networkiso_description":{
+    "message":"Facilita el acceso a una ISO por red",
+    "description":""
+  },
+    "make_image.make_image":{
+    "message":"Realizar la Imagen",
+    "description":""
+  },
+    "make_image.description":{
+    "message":"Con esta opción usted puede generar una imagen de un PC que sea arrancado por PXE y seleccionando esta entrada. Por otro lado la imagen se guardará en el directorio /net/OpenSysClone del servidor",
+    "description":""
+  },
+    "make_image.hard_disk":{
+    "message":"Disco a Clonar",
+    "description":""
+  },
+    "restore_image.restore_image":{
+    "message":"Restaurar Imagen",
+    "description":""
+  },
+    "restore_image.description":{
+    "message":"Con esta opción usted puede restaurar la imagen de un disco duro desde un servidor a un PC que arranque mediante PXE. Esta accón es recomendable para restaurar una o dos maquinas a la vez, en otro caso usar el modo Multicast",
+    "description":""
+  },
+    "restore_image.hard_disk":{
+    "message":"Disco sobre el que Restaurar la imagen ",
+    "description":""
+  },
+    "restore_image.hostname":{
+    "message":"Operacion sobre el nombre ",
+    "description":""
+  },
+    "restore_image.maintain":{
+    "message":"Mantener el nombre original",
+    "description":""
+  },
+    "restore_image.new_name":{
+    "message":"Renombrar con la IP en uso",
+    "description":""
+  },
+    "restore_image_multicast.restore_image":{
+    "message":"Restaurar Imagen con Multicast",
+    "description":""
+  },
+    "restore_image_multicast.description":{
+    "message":"Con esta opción usted puede restaurar la imagen de un disco duro a varios PC's a la vez desde un servidor mediante el arranque PXE y en modo Multicast",
+    "description":""
+  },
+    "restore_image_multicast.clients":{
+    "message":"Numero de Clientes ",
+    "description":""
+  },
+    "restore_image_multicast.time":{
+    "message":"Tiempo Máximo de Espera en segundos ",
+    "description":""
+  },
+    "delete_image.delete_image":{
+    "message":"Borrar Imagen",
+    "description":""
+  },
+    "delete_image.description":{
+    "message":"Con esta opción usted puede borrar la imagen seleccionada del servidor.",
+    "description":""
+  },
+    "delete_image.delete_select":{
+    "message":"Selecciona la imagen a borrar del servidor",
+    "description":""
+  },
+    "delete_pxe.title":{
+    "message":"Borrar la Entrada Obsoleta del Menu PXE",
+    "description":""
+  },
+    "delete_pxe.description":{
+    "message":"Con esta opción usted puede borrar la entrada creada por OpenSysClone anteriormente y que ya no quiere que se muestre",
+    "description":""
+  },
+    "delete_pxe.remove":{
+    "message":"Borrar la linea del menu PXE",
+    "description":""
+  },
+    "network_iso.title":{
+    "message":"Servir ISO por red",
+    "description":""
+  },
+    "network_iso.description":{
+    "message":"Con esta opción usted puede servir una imagen ISO mediante el menu PXE y asi arrancar desde un PC de la red",
+    "description":""
+  },
+    "network_iso.select":{
+    "message":"Selecciona la Imagen",
+    "description":""
+  },
+    "main.bootmanager":{
+    "message":"Administra el menu pxe ",
+    "description":""
+  },
+    "bootmanager.bootmanager":{
+    "message":"Gestionar el menú PXE",
+    "description":""
+  },
+    "bootmanager.description":{
+    "message":"Order boot menu ",
+    "description":""
+  },
+    "main.rescuepxe":{
+    "message":"Recupera el arranque PXE ",
+    "description":""
+  },
+    "rescuepxe.description":{
+    "message":"Vamos a ayudarte a crear un dispositivo de rescate para permitirte el arranque por PXE.",
+    "description":""
+  },
+    "rescuepxe.select":{
+    "message":"Selecciona el dispositivo que utilizarás para generar el recuperador del gestor de arranque para PXE.",
+    "description":""
+  },
+    "rescuepxe.usb":{
+    "message":"USB",
+    "description":""
+  },
+    "rescuepxe.floppy":{
+    "message":"Disquete",
+    "description":""
+  },
+    "rescuepxe.cdrom":{
+    "message":"CDRom",
+    "description":""
+  },
+    "rescuepxe.cdrom_test":{
+    "message":"Tienes que insertar un CD para la creacion del dispositivo de rescate. Introduce uno y presiona de nuevo el boton realizar",
+    "description":""
+  },
+    "rescuepxe.cdrom_blank_test":{
+    "message":"Tienes que insertar un CD virgen para la creacion del dispositivo de rescate. Introduce uno y presiona de nuevo el boton realizar",
+    "description":""
+  },
+    "rescuepxe.select_cdrom.device":{
+    "message":"Seleccionar dispositivo",
+    "description":""
+  },
+    "rescuepxe.select_floppy":{
+    "message":"Por favor introduce un disquete y presiona realizar, luego espera a que la luz led de la disquetera se apague.",
+    "description":""
+  },
+    "rescuepxe.select_cdrom":{
+    "message":"Por favor intruduce un CDRom y presiona realizar, luego espera que se pague la luz led de la unidad de CDRom.",
+    "description":""
+  },
+    "rescuepxe.uservalidate.name":{
+    "message":"Usuario Local:",
+    "description":""
+  },
+    "rescuepxe.uservalidate.passwd":{
+    "message":"Contraseña:",
+    "description":""
+  },
+    "rescuepxe.stage1.tittle":{
+    "message":"Creación de rescate de Menú PXE en USB.",
+    "description":""
+  },
+    "rescuepxe.stage1.description":{
+    "message":"Coge en tu mano el USB que va a ser formateado, y no lo pinches aún. recuerda que todos los datos que tenga actualmente el USB serán borrados.",
+    "description":""
+  },
+    "rescuepxe.stage1.button":{
+    "message":"Siguiente.",
+    "description":""
+  },
+    "rescuepxe.stage2.tittle":{
+    "message":"Creación de rescate de Menú PXE en USB.",
+    "description":""
+  },
+    "rescuepxe.stage2.description":{
+    "message":"Pincha ahora el USB a la máquina",
+    "description":""
+  },
+    "rescuepxe.stage3.media":{
+    "message":"Grabar USB",
+    "description":""
+  },
+    "rescuepxe.cancel":{
+    "message":"Detectar de nuevo",
+    "description":""
+  },
+    "rescuepxe.stage3.tittle":{
+    "message":"Creación de rescate de Menú PXE en USB.",
+    "description":""
+  },
+    "rescuepxe.stage3.description":{
+    "message":"por favor haz click en el dispositivo y luego presiona el botón 'Grabar USB'.",
+    "description":""
+  },
+    "rescuepxe.stage3.tablecol1":{
+    "message":"Dispositivo",
+    "description":""
+  },
+    "rescuepxe.stage3.tablecol2":{
+    "message":"Modelo",
+    "description":""
+  },
+    "rescuepxe.stage3.tablecol3":{
+    "message":"Tamaño",
+    "description":""
+  },
+    "rescuepxe.finished_burn":{
+    "message":"Su dispositivo de rescate para menu PXE ya se ha creado.",
+    "description":""
+  },
+    "advanced_ops.advanced_ops":{
+    "message":"Opciones Avanzadas",
+    "description":""
+  },
+    "advanced_ops.description":{
+    "message":"Desde aqui se pueden modificar algunas opciones criticas de OpenSysClone.No modifique nada si no es un experto.",
+    "description":""
+  },
+    "advanced_ops.protocol":{
+    "message":"Seleccione el protocolo para la transmisión del SQUASHFS:",
+    "description":""
+  },
+    "tftp":{
+    "message":"TFTP Modo",
+    "description":""
+  },
+    "http":{
+    "message":"HTTP Modo",
+    "description":""
+ },
+    "write_menu_pxe.response2":{
+    "message":" para el SQUASFH, tus opciones han sido escritas en el fichero ",
+    "description":""
+},
+    "write_menu_pxe.response1":{
+    "message":"El sistema tiene una nueva entrada para el menú PXE con el protocolo  ",
+    "description":""
+ },
+    "avanced_ops.response1":{
+    "message":"has modificado el protocolo de envio del SQUASHFS. Ahora tienes seleccionado ",
+    "description":""
+  },
+    "restore_multicast.clientswait":{
+    "message":"No especificastes el numero de clientes donde restaurar la imagen.",
+    "description":""
+ },
+    "restore_multicast.timewait":{
+    "message":"No especificastes el tiempo de espera maximo de espera a los clientes para restaurar la imagen en modo multicast.",
+    "description":""
+ },
+    "restore.imgname":{
+    "message":"Has de seleccionar una imagen que será restaurada.",
+    "description":""
+ },
+    "restore.imagehdd":{
+    "message":"Has de especificar el disco de destino para la restauración de la imagen.",
+    "description":""
+ },
+    "delete_image.ok":{
+    "message":"Has borrado del servidor la imagen ",
+    "description":""
+ },
+    "delete_pxe.ok":{
+    "message":"Del menú PXE se ha eliminado la entrada de OpenSysClone que estaba en el fichero ",
+    "description":""
+ },
+    "delete_pxe.fail":{
+    "message":"Actualmente OpenSysClone no posee ninguna entrada en el menu PXE.",
+    "description":""
+ },
+    "delete.imgname":{
+    "message":"Has de seleccionar una imagen que pueda ser borrada.",
+    "description":""
+ },
+    "export_iso.nameiso":{
+    "message":"Debes definir el nombre de la ISO para el menú PXE.",
+    "description":""
+ },
+    "export_iso.path_failed":{
+    "message":"Debes de especificar la ruta de la ISO que quieres exportar.",
+    "description":""
+ },
+    "export_iso.export_failed":{
+    "message":"El sistema no puede exportar tu ISO.",
+    "description":""
+ },
+    "export_iso.mount_failed":{
+    "message":"Tu ISO posee algún problema, el sistema no puede montarla.",
+    "description":""
+ },
+    "export_iso.ok":{
+    "message":"Tu ISO ha sido exportada correctamente, ahora posees una nueva entrada en el menú PXE con esta opción.",
+    "description":""
+ }
+}

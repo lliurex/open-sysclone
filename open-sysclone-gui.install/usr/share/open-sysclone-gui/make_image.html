@@ -1,0 +1,85 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/section.css">
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/make_image.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/combobox_1.js"></script>
+</head>
+
+<body>
+	<!--BANNER Titulo y Descripcion-->
+ 	<div id="content">
+		<div class="bannerbox">
+			<img value="make_image" src="img/generacion_imagen_banner.png" alt="Make Image">
+			<div class="textinfo">
+				<div class="optiontitle">
+					<script type="text/javascript">document.write(i18n.gettext("make_image.make_image"));</script>
+				</div>	
+				<div class="optiondescription">
+					<script type="text/javascript">document.write(i18n.gettext("make_image.description"));</script>
+				</div>
+			</div>
+		</div>
+		<!--Formulario a rellenar con los botones-->
+		<div id="myform">
+			<div class="content-form">
+				<div>
+					<div class="group">
+						<div class="customlabel">
+							<input type="text" required="required" id="imgname" class="custominput" value="autohostname"/><span class="highlight"></span><span class="bar"></span>
+							<label><script type="text/javascript">document.write(i18n.gettext("image_name"));</script> <img src="img/question.png" height="15px" width="15" title="If you type autohostname, the system autorename the image created with Ip, data and time, but you can type an especific name"/></label>
+						</div>
+					</div>
+					<div class="group">
+						<div class="customlabel">
+							<input type="text" required="required" id="imagehdd" class="custominput" value="sda"/><span class="highlight"></span><span class="bar"></span>
+							<label><script type="text/javascript">document.write(i18n.gettext("make_image.hard_disk"));</script> <img src="img/question.png" height="15px" width="15" title="Usually the hard disk to make image is sda but you can change it if you are sure that the system to backup is in other device"/></label>
+						</div>
+					</div>
+					<div class="custom-select" style="width:220px;">
+						<select required="required" name="finaloperation" id="finaloperation">
+							<option value="poweroff"><script type="text/javascript">document.write(i18n.gettext("shutdown"));</script></option>
+							<option value="poweroff"><script type="text/javascript">document.write(i18n.gettext("shutdown"));</script></option>
+							<option value="reboot"><script type="text/javascript">document.write(i18n.gettext("reboot"));</script></option>
+						</select>
+						<label><script type="text/javascript">document.write(i18n.gettext("final_operation"));</script> <img src="img/question.png" height="15px" width="15" title="When Open-SysClone ends the operations it can shutdown the computer or reboot it."/></label>
+						<!-- <label><script type="text/javascript">document.write(i18n.gettext("final_operation"));</script> <img src="img/question.png" height="15px" width="15" title="When Open-SysClone ends the operations it can shutdown the computer or reboot it."/></label> -->
+					</div>
+					
+				</div>
+				<!--Botones de regreso y de opciones avanzadas-->
+				<div class="align-right">
+					<div>
+						<span id="goback2">
+							<span id="initial_back"><img src="img/back_arrow.png" height="25px" width="25" title="Back to main section"/></span>
+							<span id="onhover_back"><img src="img/back_arrow_blue.png" height="25px" width="25" title="Back to main section"/></span>
+						</span>
+					</div>
+					<div>
+						<span id="advanced_ops">
+							<span id="initial"><img src="img/advanced_options.png" height="25px" width="25" title="Access for advanced options"/></span>
+							<span id="onhover"><img src="img/advanced_options_blue.png" height="25px" width="25" title="Access for advanced options"/></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!--Boton de ejecucion del formulario-->
+			<div class="action-form">
+				<div class="btn-box">
+					<button id="makeimage" class="btn btn-submit" type="submit"><script>document.write(i18n.gettext("done"));</script></button>
+				</div>
+			</div>
+			
+		</div>
+		<!--formulario del resultado-->
+		<div>
+			<div id='result'></div>
+		</div>
+	</div>
+</body>
+</html>

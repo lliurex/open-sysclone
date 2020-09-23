@@ -1,0 +1,11 @@
+{
+    "OPENSYSCLONE_SQUASHFS_PROTOCOL": {
+        "function": "lliurex.variables.opensysclone_squashfs_protocol.init",
+        "packages": [
+            "open-sysclone-server",
+            "open-sysclone-gui"
+        ],
+        "description": "Protocol to dispatch squashfs",
+        "value": null
+    }
+}

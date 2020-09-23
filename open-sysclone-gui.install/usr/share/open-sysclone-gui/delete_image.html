@@ -1,0 +1,87 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="css/section.css">
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/combobox_1.js"></script>
+	<script type="text/javascript" src="js/delete_image.js"></script>
+
+</head>
+
+<body>
+	<div id="content">
+		<div class="bannerbox">
+			<img value="Delete Image" src="img/borrar_banner.png" alt="Delete Image">
+			<div class="textinfo">
+				<div class="optiontitle">
+					<script type="text/javascript">document.write(i18n.gettext("delete_image.delete_image"));</script>
+				</div>	
+				<div class="optiondescription">
+					<script type="text/javascript">document.write(i18n.gettext("delete_image.description"));</script>
+				</div>
+			</div>
+		</div>
+
+		<div id="myform">
+			<div class="content-form">
+				<div>
+					<div class="group">
+						<div class="customlabel">							
+							<div class="custom-select" style="width:420px;">
+								<select required="required" name="imagename" id="imagename"></select>
+								<label>
+									<script type="text/javascript">document.write(i18n.gettext("delete_image.delete_select"));</script> <img src="img/question.png" height="15px" width="15" title="Select image to delete it from server"/>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="align-right">
+					<div>
+						<span id="goback2">
+							<span id="initial_back"><img src="img/back_arrow.png" height="25px" width="25" title="Back to main section"/></span>
+							<span id="onhover_back"><img src="img/back_arrow_blue.png" height="25px" width="25" title="Back to main section"/></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="action-form">
+				<div class="btn-box">
+					<button id="deleteimage" class="btn btn-submit" type="submit"><script>document.write(i18n.gettext("done"));</script></button>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div id='result'></div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+<!-- <body>
+	<div id="content">
+		<h1><script type="text/javascript">document.write(i18n.gettext("delete_image.delete_image"));</script></h1>
+		<h5><script type="text/javascript">document.write(i18n.gettext("delete_image.description"));</script></h5>
+
+		<div class="myform">
+			<label><script type="text/javascript">document.write(i18n.gettext("delete_image.delete_select"));</script></label>
+			<br>
+			<br>
+			<div class="center">
+				<select name="imagename" id="imagename"></select>
+			</div>
+			<br>
+			<div class="right">				
+				<button id="deleteimage"><script type="text/javascript">document.write(i18n.gettext("done"));</script></button>
+			</div>
+		<div id='result' style='margin-top:10px'></div>
+		</div>
+		<h4 class="goback" id="goback"><script type="text/javascript">document.write(i18n.gettext("go_back"));</script></h4>
+	</div>
+</body>
+</html> -->

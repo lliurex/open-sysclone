@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Name=Open-SysClone
+Name[es]=Open-SysClone
+Name[ca_ES.UTF-8@valencia]=Open-SysClone
+Name[ca_ES@valencia]=Open-SysClon
+Comment=Tool that, in a classroom, allows to clone the machines in an efficient and precise, obtaining the maximum performance of the network and optimizing the time of preparation of the classes. The tool provides the ability to perform an image of a machine at a given time and restore it when, how and how many times it is needed on one or more machines at a time
+Comment[es]=Herramienta que, dentro de un aula, permite clonar las máquinas de una manera eficaz y precisa, obteniendo el máximo rendimiento de la red y optimizando el tiempo de preparación de las clases. La herramienta proporciona la capacidad de realizar una imagen de una máquina en un momento dado y restaurarla cuando, como y cuantas veces sea preciso sobre una o varias máquinas a la vez. 
+Comment[ca_ES.UTF-8@valencia]=Ferramenta que, dins d'una aula, permet clonar les màquines d'una manera eficaç i precisa; d'aquesta manera s'obté el màxim rendiment de la xarxa i s'optimitza el temps de preparació de les classes.  La ferramenta proporciona la capacitat de realitzar una imatge d'una màquina en un moment donat i restaurar-la quan, com i quantes vegades siga necessari sobre una o unes quantes màquines al mateix temps. 
+Comment[ca_ES@valencia]=Ferramenta que, dins d'una aula, permet clonar les màquines d'una manera eficaç i precisa; d'aquesta manera s'obté el màxim rendiment de la xarxa i s'optimitza el temps de preparació de les classes.  La ferramenta proporciona la capacitat de realitzar una imatge d'una màquina en un moment donat i restaurar-la quan, com i quantes vegades siga necessari sobre una o unes quantes màquines al mateix temps. 
+Exec=/usr/bin/nw0.21 --password-store=basic /usr/share/open-sysclone-gui
+Terminal=false
+Icon=open-sysclone
+Type=Application
+GenericName=OpenSysClone
+Categories=LliureX-Administration;

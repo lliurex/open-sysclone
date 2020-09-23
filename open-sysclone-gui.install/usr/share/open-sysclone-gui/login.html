@@ -1,0 +1,49 @@
+<html>
+<!--  http://www.webresourcesdepot.com/free-jquery-ui-themes-collection/ -->
+<head>
+    <link rel="stylesheet" href="css/login.css">
+							  
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	
+	
+	<!--OWNER-->
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>	
+
+</head>
+<body class="login">
+
+<div id="login">
+	<div id="loginform">
+		<div class="group">
+			<div id="label_username" class="customlabel">
+	    		<input type="text" required="required" id="input_username" class="custominput"/><span class="highlight"></span><span class="bar"></span>
+	    		<label><script type="text/javascript">document.write(i18n.gettext("login.username"));</script></label>
+			</div>
+		</div>
+		<div class="group">
+			<div id="label_password" class="customlabel">
+	    	<input type="password" required="required" id="input_password" class="custominput"/><span class="highlight"></span><span class="bar"></span>
+	    	<label><script type="text/javascript">document.write(i18n.gettext("login.password"));</script></label>
+			</div>
+		</div>
+
+		<div class="group">
+			<div id="label_server" class="customlabel">
+	    	<input type="text" required="required" id="input_server" value='localhost' class="custominput"/><span class="highlight"></span><span class="bar"></span>
+	    	<label><script type="text/javascript">document.write(i18n.gettext("login.server"));</script></label>
+			</div>
+		</div>
+		<div class="btn-box">
+			<button id="LoginButton" class="btn btn-submit" type="submit" value="login"><script>document.write(i18n.gettext("enter"));</script></button>
+		</div>	
+	</div>
+	<div id="msg_err"></div>
+</div>
+
+
+</body>
+</html>

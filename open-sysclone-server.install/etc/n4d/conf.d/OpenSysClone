@@ -1,0 +1,13 @@
+[SETUP]
+type=python
+path=OpenSysClone.py
+class=OpenSysClone
+[METHODS]
+write_menu_pxe = admin,admins,adm
+del_menu_pxe = admin,admins,adm
+nfs_export_start = admin,admins,adm
+nfs_export_stop = admin,admins,adm
+send_multicast_file = admin,admins,adm
+list_img= admin,admins,adm
+check_path= admin,admins,adm
+del_image= admin,admins,adm

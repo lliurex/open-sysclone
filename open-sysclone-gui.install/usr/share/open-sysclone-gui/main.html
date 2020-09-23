@@ -1,0 +1,120 @@
+<html>
+<!--  http://www.webresourcesdepot.com/free-jquery-ui-themes-collection/ -->
+<head>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/main.css">
+							  
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	
+	
+	<!--OWNER-->
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+	<div id="content">
+		<div class="myform">
+			<ul id="menu">
+				<li id="make_image">
+					<span id="advanced_ops">
+							<span id="initial"><img value="make_image" src="img/generacion_imagen_banner.png" height="80px" width="80px" lt="Make Image"/></span>
+							<span id="onhover"><img value="make_image" src="img/generacion_imagen_banner_hover.png" height="80px" width="80px"lt="Make Image"/></span>
+					</span>
+					
+					<div class="textinfo">
+						<div class="optiontitle">
+							<script type="text/javascript">document.write(i18n.gettext("main.make_image"));</script>
+						</div>
+						<div class="optiondescription"><script type="text/javascript">document.write(i18n.gettext("main.make_image_description"));</script></div>	
+					</div>
+				</li>
+				<li id="restore_image">
+					<span id="advanced_ops">
+							<span id="initial"><img value="restore_image" src="img/restauracion_imagen_banner.png" height="80px" width="80px" lt="Make Image"/></span>
+							<span id="onhover"><img value="restore_image" src="img/restauracion_imagen_banner_hover.png" height="80px" width="80px"lt="Make Image"/></span>
+					</span>
+					<div class="textinfo">
+						<div class="optiontitle">
+							<script type="text/javascript">document.write(i18n.gettext("main.restore_image"));</script>
+						</div>
+						<div class="optiondescription"><script type="text/javascript">document.write(i18n.gettext("main.restore_image_description"));</script></div>	
+					</div>
+				</li>
+				<li id="restore_image_multicast">
+					<span id="advanced_ops">
+							<span id="initial"><img value="restore_image_multicast" src="img/restauracion_imagen_multicast_banner.png" height="80px" width="80px" lt="Make Image"/></span>
+							<span id="onhover"><img value="restore_image_multicast" src="img/restauracion_imagen_multicast_banner_hover.png" height="80px" width="80px"lt="Make Image"/></span>
+					</span>
+					<div class="textinfo" id="restore_image_multicast">
+						<div class="optiontitle">
+							<script type="text/javascript">document.write(i18n.gettext("main.restore_image_multicast"));</script>
+						</div>
+						<div class="optiondescription"><script type="text/javascript">document.write(i18n.gettext("main.restore_image_multicast_description"));</script></div>	
+					</div>
+				</li>
+				<li id="delete_image">
+					<span id="advanced_ops">
+							<span id="initial"><img value="delete_image" src="img/borrar_banner.png" height="80px" width="80px" lt="Make Image"/></span>
+							<span id="onhover"><img value="delete_image" src="img/borrar_banner_hover.png" height="80px" width="80px"lt="Make Image"/></span>
+					</span>
+					<div class="textinfo">
+						<div class="optiontitle">
+							<script type="text/javascript">document.write(i18n.gettext("main.delete_image"));</script>
+						</div>
+						<div class="optiondescription"><script type="text/javascript">document.write(i18n.gettext("main.delete_image_description"));</script></div>	
+					</div>
+				</li>
+				<li id="managepxe">
+					<span id="advanced_ops">
+							<span id="initial"><img value="delete_image" src="img/gestion_menu_pxe.png" height="80px" width="80px" lt="Make Image"/></span>
+							<span id="onhover"><img value="delete_image" src="img/gestion_menu_pxe_hover.png" height="80px" width="80px"lt="Make Image"/></span>
+					</span>
+					<div class="textinfo">
+						<div class="optiontitle">
+							<script type="text/javascript">document.write(i18n.gettext("main.bootmanager"));</script>
+						</div>
+						<div class="optiondescription"><script type="text/javascript">document.write(i18n.gettext("main.bootmanager_description"));</script></div>	
+					</div>
+				</li>
+				<li id="networkiso">
+					<span id="advanced_ops">
+							<span id="initial"><img value="delete_image" src="img/servir_iso.png" height="80px" width="80px" lt="Make Image"/></span>
+							<span id="onhover"><img value="delete_image" src="img/servir_iso_hover.png" height="80px" width="80px"lt="Make Image"/></span>
+					</span>
+					<div class="textinfo">
+						<div class="optiontitle">
+							<script type="text/javascript">document.write(i18n.gettext("main.networkiso"));</script>
+						</div>
+						<div class="optiondescription"><script type="text/javascript">document.write(i18n.gettext("main.networkiso_description"));</script></div>	
+					</div>
+				</li>
+			</ul>
+			<!-- 
+			<div class="banner">
+				<img id="delete_image" value="delete_image" src="img/delete_image_off.jpg" alt="delete_image">
+				<div><script type="text/javascript">document.write(i18n.gettext("main.delete_image"));</script></div>
+			</div>
+			<div class="banner">
+				<img id="delete_pxe" value="delete_pxe" src="img/delete_pxe_off.jpg" alt="delete_pxe">
+				<div><script type="text/javascript">document.write(i18n.gettext("main.delete_pxe_menu"));</script></div>
+			</div>
+			<div class="banner"> 
+				<img id="managepxe" value="networkiso" src="img/manage_pxe_off.jpg" alt="networkiso">
+				<div><script type="text/javascript">document.write(i18n.gettext("main.bootmanager"));</script></div>
+			</div>
+			<div class="banner">
+				<img id="rescuepxe" value="rescuepxe" src="img/rescue_pxe_off.jpg" alt="networkiso">
+				<div><script type="text/javascript">document.write(i18n.gettext("main.rescuepxe"));</script></div>
+			</div>
+			<div class="banner"> 
+				<img id="networkiso" value="networkiso" src="img/network_iso_off.jpg" alt="networkiso">
+				<div><script type="text/javascript">document.write(i18n.gettext("main.networkiso"));</script></div>
+			</div>-->
+		</div>
+	</div>
+</body>
+</html>

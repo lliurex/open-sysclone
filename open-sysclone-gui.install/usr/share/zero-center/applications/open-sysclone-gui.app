@@ -1,0 +1,15 @@
+Name=open-sysclone-gui
+Name[en]=Open-SysClone
+Name[qcv]=Open-SysClone
+Name[ca_ES@valencia]=Open-SysClone
+Name[es]=Open-SysClone
+Comment=Tool that, in a classroom, allows to clone the machines in an efficient and precise, obtaining the maximum performance of the network and optimizing the time of preparation of the classes. 
+Comment[en]=Tool that, in a classroom, allows to clone the machines in an efficient and precise, obtaining the maximum performance of the network and optimizing the time of preparation of the classes. 
+Comment[es]=Herramienta que, dentro de un aula, permite clonar las máquinas de una manera eficaz y precisa, obteniendo el máximo rendimiento de la red y optimizando el tiempo de preparación de las clases.
+Comment[qcv]=Ferramenta que, dins d'una aula, permet clonar les màquines d'una manera eficaç i precisa; d'aquesta manera s'obté el màxim rendiment de la xarxa i s'optimitza el temps de preparació de les classes.
+Comment[ca]=Ferramenta que, dins d'una aula, permet clonar les màquines d'una manera eficaç i precisa; d'aquesta manera s'obté el màxim rendiment de la xarxa i s'optimitza el temps de preparació de les classes.
+Icon=open-sysclone
+Category=System
+ScriptPath=open-sysclone-gui.zmd
+Service=False
+Groups=admins;adm

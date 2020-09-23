@@ -1,0 +1,89 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/section.css">
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/networkiso.js"></script>
+	<script type="text/javascript" src="js/combobox_1.js"></script>
+	
+</head>
+	
+<body>
+	<!--BANNER Titulo y Descripcion-->
+ 	<div id="content">
+		<div class="bannerbox">
+			<img value="make_image" src="img/servir_iso.png" alt="Make Image">
+			<div class="textinfo">
+				<div class="optiontitle">
+					<script type="text/javascript">document.write(i18n.gettext("network_iso.title"));</script>
+				</div>	
+				<div class="optiondescription">
+					<script type="text/javascript">document.write(i18n.gettext("network_iso.description"));</script>
+				</div>
+			</div>
+		</div>
+		<!--Formulario a rellenar con los botones-->
+		<div id="myform">
+			<div class="content-form">
+				<div>
+					<div class="group">
+						<div class="customlabel">
+							<input type="text" required="required" id="isoname" class="custominput" value="OpenSysClone"/><span class="highlight"></span><span class="bar"></span>
+							<label><script type="text/javascript">document.write(i18n.gettext("image_name"));</script> <img src="img/question.png" height="15px" width="15" title="Insert the name to share your ISO in the PXE menu"/></label>
+						</div>
+					</div>
+					<div class="group">
+						<div class="customlabel">
+							<input type="file" id='isopath' class="custom-file-input"><span class="highlight"></span><span class="bar"></span>
+							<label><script type="text/javascript">document.write(i18n.gettext("network_iso.select"));</script> <img src="img/question.png" height="15px" width="15" title="Select ISO to boot with PXE menu"/></label>
+						</div>
+					</div>
+				</div>
+				<!--Botones de regreso y de opciones avanzadas-->
+				<div class="align-right">
+					<div>
+						<span id="goback2">
+							<span id="initial_back"><img src="img/back_arrow.png" height="25px" width="25" title="Back to main section"/></span>
+							<span id="onhover_back"><img src="img/back_arrow_blue.png" height="25px" width="25" title="Back to main section"/></span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<!--Boton de ejecucion del formulario-->
+			<div class="action-form">
+				<div class="btn-box">
+					<button id="exportiso" class="btn btn-submit" type="submit"><script>document.write(i18n.gettext("done"));</script></button>
+				</div>
+			</div>
+			
+		</div>
+		<!--formulario del resultado-->
+		<div>
+			<div id='result'></div>
+		</div>
+	</div>
+</body>
+</html>
+<!-- <body>
+	<div id="content">
+		<h1><script type="text/javascript">document.write(i18n.gettext("network_iso.title"));</script></h1>
+		<h5><script type="text/javascript">document.write(i18n.gettext("network_iso.description"));</script></h5>
+		<div class="myform">
+			<label class="customlabel"><script type="text/javascript">document.write(i18n.gettext("image_name"));</script><img src="img/question.png" height="25px" width="25" title="This is the name for the entry in PXE menu"/></label>
+			<input class="custominput" id='isoname' type='text' value='OpenSysClone'/>
+			<br>
+			<label class="customlabel"><script type="text/javascript">document.write(i18n.gettext("network_iso.select"));</script><img src="img/question.png" height="25px" width="25" title="Select ISO to boot with PXE menu"/></label>
+			<input id='isopath' type='file' />
+			<br>
+			<div class="right">
+				<button id="exportiso"><script type="text/javascript">document.write(i18n.gettext("done"));</script></button>
+			</div>
+			<div id='result' style='margin-top:10px'></div>
+		</div>
+		<h4 class="goback" id="goback"><script type="text/javascript">document.write(i18n.gettext("go_back"));</script></h4>
+	</div>
+</body> -->

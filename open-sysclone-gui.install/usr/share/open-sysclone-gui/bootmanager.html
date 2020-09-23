@@ -1,0 +1,133 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/section.css">
+			
+	<script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.xmlrpc.js"></script>
+	<script type="text/javascript" src="lib/i18n.js"></script>
+	<script type="text/javascript" src="i18n/loadlang.js"></script>
+	<script type="text/javascript" src="js/combobox_1.js"></script>
+	<script type="text/javascript" src="js/bootmanager.js"></script>
+
+</head>
+	
+<body>
+	<!--BANNER Titulo y Descripcion-->
+	<div id="content">
+		<div class="bannerbox">
+			<img value="make_image" src="img/gestion_menu_pxe.png" alt="Make Image">
+			<div class="textinfo" id="textinfo">
+				<div class="optiontitle">
+					<script type="text/javascript">document.write(i18n.gettext("bootmanager.bootmanager"));</script>
+				</div>	
+				<div class="optiondescription">
+					<script type="text/javascript">document.write(i18n.gettext("bootmanager.description"));</script>
+				</div>
+			</div>
+		</div>
+		<!--Menu navegacion-->
+		<nav class="top_menu">
+			<a class="element_menu" data-top_menu="management" href="#management">Management</a>
+			<a class="element_menu" data-top_menu="delete" href="#delete">Delete</a>
+			<a class="element_menu" data-top_menu="rescue" href="#rescue">Rescue</a>
+			<div class="animation" data-top_menu=""></div>
+		</nav>
+		<!--Formulario a rellenar con los botones DIFERENTES PANTALLAS-->
+		<!--MENU INICIO-->
+		<div class="panel" id="start">
+			<div id="myform" style="padding: 2vh;">
+				<div class="content-form" style="padding-bottom: 15px;">
+					<div>
+						<div class="group">
+						<label class="customlabel" style="top:15px;">Please select an option in the menu</label>
+						</div>
+					</div>
+					<!--Botones de regreso y de opciones avanzadas-->
+					<div class="align-right">
+						<div>
+							<span id="goback4">
+								<span id="initial_back"><img src="img/back_arrow.png" height="25px" width="25" title="Back to main section"/></span>
+								<span id="onhover_back"><img src="img/back_arrow_blue.png" height="25px" width="25" title="Back to main section"/></span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--FIN MENU INICIO-->
+		<!--MENU MANEGEMENT-->
+		<div class="panelcontainer">
+			<div class="panel" id="management">
+			<div id="myform">
+				<div class="content-form">
+					<iframe id="bootmanager" frameborder="0" ALLOWTRANSPARENCY="true"></iframe>
+					<!--Botones de regreso y de opciones avanzadas-->
+					<div class="align-right">
+						<div>
+							<span id="goback2">
+								<span id="initial_back"><img src="img/back_arrow.png" height="25px" width="25" title="Back to main section"/></span>
+								<span id="onhover_back"><img src="img/back_arrow_blue.png" height="25px" width="25" title="Back to main section"/></span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--FIN MENU MANEGEMENT-->
+		<div class="panel" id="delete">
+			<div id="myform">
+				<div class="content-form">
+					<!--Botones de regreso y de opciones avanzadas-->
+					<div class="align-right">
+						<div>
+							<span id="goback">
+								<span id="initial_back"><img src="img/back_arrow.png" height="25px" width="25" title="Back to main section"/></span>
+								<span id="onhover_back"><img src="img/back_arrow_blue.png" height="25px" width="25" title="Back to main section"/></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--Boton de ejecucion del formulario-->
+				<div class="action-form-center">
+					<div class="btn-box">
+						<button id="delete_pxe" class="btn btn-submit" type="submit"><script>document.write(i18n.gettext("delete_pxe.remove"));</script></button>
+					</div>
+				</div>
+			</div>
+			<!--formulario del resultado-->
+			<div>
+				<div id='result'></div>
+			</div>
+		</div>
+		<!--FIN MENU DELETE-->
+		<div class="panel" id="rescue">
+			<div id="myform">
+				<div class="content-form">
+					<div>
+						<div class="group">
+							<div class="customlabel">
+								<ul class="menu_rescuepxe">
+									<li><a href="rescuepxe_usb.html"><script type="text/javascript">document.write(i18n.gettext("rescuepxe.usb"));</script></span><span class="bar"></span></a></li>
+									<li><a href="rescuepxe_floppy.html"><script type="text/javascript">document.write(i18n.gettext("rescuepxe.floppy"));</script></span><span class="bar"></span></a></li>
+									<li><a href="rescuepxe_cdrom.html"><script type="text/javascript">document.write(i18n.gettext("rescuepxe.cdrom"));</script></span><span class="bar"></span></a></li>
+								</ul>							
+							</div>
+						</div>
+					</div>
+					<!--Botones de regreso y de opciones avanzadas-->
+					<div class="align-right">
+						<div>
+							<span id="goback3">
+								<span id="initial_back"><img src="img/back_arrow.png" height="25px" width="25" title="Back to main section"/></span>
+								<span id="onhover_back"><img src="img/back_arrow_blue.png" height="25px" width="25" title="Back to main section"/></span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--FIN MENU RESCUE-->
+	</div>
+</body>
+</html>

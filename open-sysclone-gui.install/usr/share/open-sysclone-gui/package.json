@@ -11,12 +11,13 @@
     "frame": true,
     "toolbar":true,
     "resizable": false,
+    "show":true,
     "fullscreen": false
     },
   "webkit": {
     "plugin":true 
   },
-  "chromium-args": "--ignore-certificate-errors --user-data-dir='/tmp/.chromium_open'"
+  "chromium-args": "--enable-node-worker --ignore-certificate-errors --user-data-dir='/tmp/.chromium_open'"
   
   /*
   https://github.com/rogerwang/node-webkit/wiki/Manifest-format

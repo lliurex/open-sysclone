@@ -1,0 +1,49 @@
+{
+    "SETUP": {
+        "type": "python",
+        "path": "OpenSysCloneExport.py",
+        "class": "OpenSysCloneExport"
+    },
+    "METHODS": {
+        "sanity_check": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "mount_iso": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "add_entry_exportfs": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "del_entry_exportfs": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "find": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "write_pxe": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "uchmod": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "export_iso": {
+            "allowed_groups": [
+                "admins"
+            ]
+        }
+    }
+}

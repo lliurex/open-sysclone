@@ -1,0 +1,59 @@
+{
+    "SETUP": {
+        "type": "python",
+        "path": "OpenSysClone.py",
+        "class": "OpenSysClone"
+    },
+    "METHODS": {
+        "write_menu_pxe": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "del_menu_pxe": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "nfs_export_start": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "nfs_export_stop": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "uchmod": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "aux_send_multicast_file": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "send_multicast_file": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "list_img": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "check_path": {
+            "allowed_groups": [
+                "admins"
+            ]
+        },
+        "del_image": {
+            "allowed_groups": [
+                "admins"
+            ]
+        }
+    }
+}

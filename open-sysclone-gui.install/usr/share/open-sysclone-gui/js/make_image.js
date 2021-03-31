@@ -24,7 +24,7 @@ function MakeImageManager(){
 		var finaloperation = $("#finaloperation").val();
 		var pathfile = 'imagenes';
 		if (imgname === ""){
-			console.log("Falta el nombre");
+			// console.log("Falta el nombre");
 			$('#result').empty();
 			var img = $(document.createElement('img')).attr('src','img/fail.png');
 			//Añado los valores al identificador que me mostrara la respuesta por pantalla
@@ -39,7 +39,7 @@ function MakeImageManager(){
 			return false;
 		}
 		if (imgname.match(/\s/)){
-			console.log("No se permiten espacios en blanco en el nombre");
+			// console.log("No se permiten espacios en blanco en el nombre");
 			$('#result').empty();
 			var img = $(document.createElement('img')).attr('src','img/fail.png');
 			//Añ los valores al identificador que me mostrara la respuesta por pantalla
@@ -54,7 +54,7 @@ function MakeImageManager(){
 			return false;
 		}
 		if (imagehdd === ""){
-			console.log("Falta el disco duro");
+			// console.log("Falta el disco duro");
 			$('#result').empty();
 			var img = $(document.createElement('img')).attr('src','img/fail.png');
 			//Añado los valores al identificador que me mostrara la respuesta por pantalla
@@ -75,13 +75,13 @@ function MakeImageManager(){
 				methodName: 'check_path',
 				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone",pathfile],
 				success: function(response,status,jqXHR){
-					
-					result=response[0][0];
+					// console.log(response)
+					result=response[0]['return'][0];
 					if (result){
 						self.nfs_export_start(imgname,imagehdd,finaloperation,pathfile);
 					}
 					else{
-						console.log("ha habido un error en la primera",response[0]);
+						// console.log("ha habido un error en la primera",response[0]);
 					}
 					
 				},
@@ -99,12 +99,12 @@ function MakeImageManager(){
 				methodName: 'nfs_export_start',
 				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone",pathfilen],
 				success: function(response,status,jqXHR){
-					result=response[0][0];
+					result=response[0]['return'][0];
 					if (result){
 						self.write_menu_pxe(imgnamer,imagehddr,finaloperationr,pathfilen);
 					}
 					else{
-						console.log("ha habido un error en la primera",response[0]);
+						// console.log("ha habido un error en la primera",response[0]);
 					}
 				},
 				error: function(jqXHR, status, error) {
@@ -125,21 +125,21 @@ function MakeImageManager(){
 					//vacio la variable que me informara del resultado
 					$('#result').empty();
 
-					result=response[0][0];
+					result=response[0]['return'][0];
 					if (result){
-						console.log("todo ha ido bien");
+						// console.log("todo ha ido bien");
 						var img = $(document.createElement('img')).attr('src','img/ok.png');
 					}
 					else{
-						console.log("ha habido un error",response[0]);
+						// console.log("ha habido un error",response[0]);
 						var img = $(document.createElement('img')).attr('src','img/fail.png');
 					}
 					//Añado los valores al identificador que me mostrara la respuesta por pantalla
 					//Especificamos el tamaño de la imagen
 					img.attr('style',"width: 15px; height: 15px; margin: 5px;");
 					//Capturo de n4d las respuestas que me interesan que son de una lista que tengo al final los dos valores protocol y la ruta del path
-					var protocol = $(document.createElement('span')).html(response[0][2][0]);
-					var path_writed = $(document.createElement('span')).html(response[0][2][1]);
+					var protocol = $(document.createElement('span')).html(response[0]['return'][2][0]);
+					var path_writed = $(document.createElement('span')).html(response[0]['return'][2][1]);
 					
 					var response1 = $(document.createElement("span")).html(i18n.gettext("write_menu_pxe.response1"));
 					var response2 =  $(document.createElement("span")).html(i18n.gettext("write_menu_pxe.response2"));

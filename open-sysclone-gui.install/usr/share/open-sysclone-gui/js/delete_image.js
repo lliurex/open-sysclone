@@ -26,11 +26,11 @@ function DeleteImageManager(){
 				methodName: 'list_img',
 				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone"],
 				success: function(response,status,jqXHR){
-					result=response[0][0];
+					result=response[0]['return'][0];
 					if (result){
-						if ($.isArray(response[0][1])){
+						if ($.isArray(response[0]['return'][1])){
 							$("#imagename").append('<option value="no_option">Select an image</option>');
-							response[0][1].forEach(function (item){
+							response[0]['return'][1].forEach(function (item){
 								var aux_option = $(document.createElement('option')).val(item).html(item);
 								$("#imagename").append(aux_option[0]);
 							});
@@ -109,7 +109,7 @@ function DeleteImageManager(){
 					//vacio la variable que me informara del resultado
 					$('#result').empty();
 
-					result=response[0][0];
+					result=response[0]['return'][0];
 					if (result){
 						console.log("Se ha borrado la imagen ",imgname);
 						var img = $(document.createElement('img')).attr('src','img/ok.png');
@@ -124,7 +124,7 @@ function DeleteImageManager(){
 						document.getElementById("result").className ="n4dresult";
 					}
 					else{
-						console.log("ha habido un error borrando la imagen",response[0]);
+						console.log("ha habido un error borrando la imagen",response[0]['return']);
 						var img = $(document.createElement('img')).attr('src','img/fail.png');
 						//Añado los valores al identificador que me mostrara la respuesta por pantalla
 						//Especificamos el tamaño de la imagen

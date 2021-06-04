@@ -77,14 +77,15 @@ function ExportIsoManager(){
 					// response[0][0] = False
 					// response[0][1] = [1,2,3,4]
 					// response[0][1][0] = 1
-					result=response[0][0];
+					console.log(response)
+					result=response[0]['return'][0];
 					if (result){
 						var img = $(document.createElement('img')).attr('src','img/ok.png');
 						var text = $(document.createElement("span")).html(i18n.gettext("export_iso.ok"));
 					}
 					else{
 						var img = $(document.createElement('img')).attr('src','img/fail.png');
-						switch (response [0][1]){
+						switch (response [0]['return'][1]){
 							case 'path_failed':
 								var text = $(document.createElement("span")).html(i18n.gettext("export_iso.path_failed"));
 								break;
@@ -95,7 +96,7 @@ function ExportIsoManager(){
 								var text = $(document.createElement("span")).html(i18n.gettext("export_iso.mount_failed"));
 								break;
 							default:
-								var text = $(document.createElement('span')).html(response[0][1]) ;
+								var text = $(document.createElement('span')).html(response[0]['return'][1]) ;
 						}
 					}
 						

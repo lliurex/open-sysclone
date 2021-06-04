@@ -1,0 +1,45 @@
+{
+    "SETUP": {
+        "type": "python",
+        "path": "OpenSysCloneRescue.py",
+        "class": "OpenSysCloneRescue"
+    },
+    "METHODS": {
+        "get_devices": {
+            "allowed_groups": [
+                "sudo",
+                "admins"
+            ]
+        },
+        "rescuepxe_floppy": {
+            "allowed_groups": [
+                "sudo",
+                "admins"
+            ]
+        },
+        "rescuepxe_usb": {
+            "allowed_groups": [
+                "sudo",
+                "admins"
+            ]
+        },
+        "rescuepxe_cdrom": {
+            "allowed_groups": [
+                "sudo",
+                "admins"
+            ]
+        },
+        "rescuepxe_cdrom_test": {
+            "allowed_groups": [
+                "sudo",
+                "admins"
+            ]
+        },
+        "rescuepxe_cdrom_blank_test": {
+            "allowed_groups": [
+                "sudo",
+                "admins"
+            ]
+        }
+    }
+}

@@ -50,20 +50,31 @@ function login() {
 			params: [sessionStorage.username , sessionStorage.password],
 			success: function(response,status,jqXHR){
 				$("body").removeClass("CursorWaiting");
-				groups=response[0][1];				
-				if ((groups.indexOf('adm')!==-1)||(groups.indexOf('admins')!==-1)||(groups.indexOf('teachers')!==-1)) {
-					// Check if it is a LMD Server
-					//checkServerVersion();
-					$("body").removeClass("CursorWaiting");
-					window.location="main.html";
-
-						
-						
-				} else{
+				console.log(response)
+				if (response[0]['status'] !== 0){
 					$("body").removeClass("CursorWaiting");
 					$("#input_password").addClass("wrong_pass");
 					$("#input_username").addClass("wrong_pass");
 					$("#msg_err").html("Username or password error!")
+
+				} else {
+					groups=response[0]['return'][1];		
+					//if ((groups.indexOf('adm')!==-1)||(groups.indexOf('admins')!==-1)||(groups.indexOf('teachers')!==-1)) {
+					//Only netadmins users can execute it, we change this old option
+					if ((groups.indexOf('admins')!==-1)||(groups.indexOf('teachers')!==-1)) {
+						// Check if it is a LMD Server
+						//checkServerVersion();
+						$("body").removeClass("CursorWaiting");
+						window.location="main.html";
+
+							
+							
+					} else{
+						$("body").removeClass("CursorWaiting");
+						$("#input_password").addClass("wrong_pass");
+						$("#input_username").addClass("wrong_pass");
+						$("#msg_err").html("Only Netadmins can execute it!")
+					}
 				}
 			},
 			error: function(jqXHR, status, error) {

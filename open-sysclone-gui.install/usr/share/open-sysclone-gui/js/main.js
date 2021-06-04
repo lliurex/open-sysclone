@@ -6,56 +6,68 @@ function MainManager(){
 MainManager.prototype.BindLoginEventHandlers = function(){
 
 //check and save protocol variable for TFTP or HTTP and init it
+var protocol = "tftp";
+//alert ('Voy a inicializar la variable')
+
 $.xmlrpc({
-	url: 'https://'+sessionStorage.server+':9779',
-	methodName: 'get_variable',
-	params: [[sessionStorage.username , sessionStorage.password],"VariablesManager",'OPENSYSCLONE_SQUASHFS_PROTOCOL'],
-	success: function(response,status,jqXHR){
-			
-			var protocol = response[0];
-			//alert (protocol)
-			
-			if ((protocol == 'tftp')||(protocol == 'http')) {
+			url: 'https://'+sessionStorage.server+':9779',
+			methodName: 'get_variable',
+			params: ['OPENSYSCLONE_SQUASHFS_PROTOCOL'],
+			success: function(response,status,jqXHR){
+					//console.log('get_variable')
+					//console.log(response)
+					//console.log(status)		
+					if ( response[0]['status'] !== 0){
+						//entramos aqui si la variable existe pero tiene un valor distinto de tftp o http
+						//alert ('valor extranyo en la variable lo inicializamos a tftp')
+						$.xmlrpc({
+								url: 'https://'+sessionStorage.server+':9779',
+								methodName: 'set_variable',
+								params: [[sessionStorage.username , sessionStorage.password],'OPENSYSCLONE_SQUASHFS_PROTOCOL',protocol],
+								success: function(response,status,jqXHR){
+									//console.log('Not exists, set_variable')
+									//console.log(response)
+									//console.log(status)
+									},
+								error: function(jqXHR, status, error) {
+									//console.log(response)
+									//console.log(status)
+									alert("Status: "+status+"\nError: N4d server is down"+error);
+								}
+						});
+					} else{
+						//console.log('Variable exists, good value??')
+						if ( response[0]['return'] !== 'tftp' && response[0]['return'] !== 'http'){
+							$.xmlrpc({
+								url: 'https://'+sessionStorage.server+':9779',
+								methodName: 'set_variable',
+								params: [[sessionStorage.username , sessionStorage.password],'OPENSYSCLONE_SQUASHFS_PROTOCOL',protocol],
+								success: function(response,status,jqXHR){
+									//console.log('Value different, set to good value, set_variable')
+									//console.log(response)
+									//console.log(status)
+									},
+								error: function(jqXHR, status, error) {
+									//console.log(response)
+									//console.log(status)
+									alert("Status: "+status+"\nError: N4d server is down"+error);
+								}
+							});
 
-				//No hace nada si tiene bien la cadena.
-				//alert ('No hago nada')
-
+						}else{
+							protocol = response[0]['return']
+							//console.log(protocol)
+						}
+					}
+			},
+			error: function(jqXHR, status, error) {
+				//console.log(response)
+				//console.log(status)
+				alert("Status: "+status+"\nError: N4d server is down"+error);
 			}
-			else {
-					var protocol = "tftp";
-				//alert ('Voy a inicializar la variable')
-
-				$.xmlrpc({
-							url: 'https://'+sessionStorage.server+':9779',
-							methodName: 'add_variable',
-							params: [[sessionStorage.username , sessionStorage.password],"VariablesManager",'OPENSYSCLONE_SQUASHFS_PROTOCOL',protocol,"","OpenSysClone variable for squashfs","open-sysclone-gui"],
-							success: function(response,status,jqXHR){		
-									if ( response[0][0]===false){
-										//entramos aqui si la variable existe pero tiene un valor distinto de tftp o http
-										//alert ('valor extranyo en la variable lo inicializamos a tftp')
-										$.xmlrpc({
-												url: 'https://'+sessionStorage.server+':9779',
-												methodName: 'set_variable',
-												params: [[sessionStorage.username , sessionStorage.password],"VariablesManager",'OPENSYSCLONE_SQUASHFS_PROTOCOL',protocol],
-												success: function(response,status,jqXHR){
-													},
-												error: function(jqXHR, status, error) {
-													alert("Status: "+status+"\nError: N4d server is down"+error);
-												}
-										});
-									};
-							},
-							error: function(jqXHR, status, error) {
-								alert("Status: "+status+"\nError: N4d server is down"+error);
-							}
-							
-				});
-			}
-	},
-	error: function(jqXHR, status, error) {
-		alert("Status: "+status+"\nError: N4d server is down"+error);
-	}
+			
 });
+
 	
 	$("#make_image").bind('click',make_image);
 	$("#restore_image").bind('click',restore_image);
@@ -120,7 +132,8 @@ function rescuepxe(event){
 					//alert(response[0]['status']);
 					//alert(response[0]['msg'].length);
 					
-					if ( response[0][0]===true){
+					//if ( response[0][0]===true){
+					if ( response[0]['status']===0){
 
 						sessionStorage.localusername = sessionStorage.username;
 						sessionStorage.localpassword = sessionStorage.password;

@@ -34,16 +34,16 @@ function RescuepxeManagerUsb(){
 		$.xmlrpc({
 				url: 'https://localhost:9779',
 				methodName: 'get_devices',
-				params: ['', "OpenSysCloneRescue"],
+				params: [[sessionStorage.username, sessionStorage.password], "OpenSysCloneRescue"],
 				success: function(response,status,jqXHR){
 					//alert(response[0]['status']);
 					//alert(response[0]['msg'].length);
 					
-					if ( response[0]['status']===true){
-						setfunc(response[0]['msg']);
+					if ( response[0]['return'][0]===true){
+						setfunc(response[0]['return'][1]);
 						callback();
 					}
-					else alert("Error: "+response[0]['msg']);
+					else alert("Error: "+['return'][1]);
 					
 				},
 				error: function(jqXHR, status, error) {
@@ -79,7 +79,7 @@ function RescuepxeManagerUsb(){
 					//alert(response[0]['status']);
 					//alert(response[0]['msg'].length);
 					
-					if ( response[0][0]===true){
+					if ( response[0]['return'][0]===true){
 
 						sessionStorage.localusername = sessionStorage.username;
 						sessionStorage.localpassword = sessionStorage.password;
@@ -212,13 +212,13 @@ function RescuepxeManagerUsb(){
 				params: [[sessionStorage.localusername, sessionStorage.localpassword], "OpenSysCloneRescue", self.selecteddevice],
 				success: function(response,status,jqXHR){
 					$("#content").removeClass("CursorWaiting");
-					if ( response[0][0]===true){
+					if ( response[0]['return'][0]===true){
 						alert(i18n.gettext("rescuepxe.finished_burn"));
 						$("#waiting_div").remove();
 						window.location='main.html';
 					} 
 					else{
-						alert("Error: "+response[0][1]);
+						alert("Error: "+response[0]['return'][1]);
 					}
 				},
 				error: function(jqXHR, status, error) {

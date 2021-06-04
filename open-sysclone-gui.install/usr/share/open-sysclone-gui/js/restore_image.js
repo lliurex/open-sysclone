@@ -11,11 +11,11 @@ function RestoreImageManager(){
 				methodName: 'list_img',
 				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone"],
 				success: function(response,status,jqXHR){
-					result=response[0][0];
+					result=response[0]['return'][0];
 					if (result){
-						if ($.isArray(response[0][1])){
+						if ($.isArray(response[0]['return'][1])){
 							$("#imagename").append('<option value="no_option">Select an image</option>');
-							response[0][1].forEach(function (item){
+							response[0]['return'][1].forEach(function (item){
 								var aux_option = $(document.createElement('option')).val(item).html(item);
 								$("#imagename").append(aux_option[0]);
 							});
@@ -103,12 +103,12 @@ function RestoreImageManager(){
 				methodName: 'nfs_export_start',
 				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone"],
 				success: function(response,status,jqXHR){
-					result=response[0][0];
+					result=response[0]['return'][0];
 					if (result){
 						self.write_menu_pxe(imgname,imagehdd,finaloperation,hostoperation);
 					}
 					else{
-						console.log("ha habido un error en la primera",response[0]);
+						console.log("ha habido un error en la primera",response[0]['return']);
 					}
 				},
 				error: function(jqXHR, status, error) {
@@ -129,21 +129,21 @@ function RestoreImageManager(){
 					//vacio la variable que me informara del resultado
 					$('#result').empty();
 
-					result=response[0][0];
+					result=response[0]['return'][0];
 					if (result){
 						console.log("todo ha ido bien");
 						var img = $(document.createElement('img')).attr('src','img/ok.png');
 					}
 					else{
-						console.log("ha habido un error",response[0]);
+						console.log("ha habido un error",response[0]['return']);
 						var img = $(document.createElement('img')).attr('src','img/fail.png');
 					}
 					//Añado los valores al identificador que me mostrara la respuesta por pantalla
 					//Especificamos el tamaño de la imagen
 					img.attr('style',"width: 15px; height: 15px; margin: 5px;");
 					//añado a la variable text la respuesta de N4D
-					var protocol = $(document.createElement('span')).html(response[0][2][0]);
-					var path_writed = $(document.createElement('span')).html(response[0][2][1]);
+					var protocol = $(document.createElement('span')).html(response[0]['return'][2][0]);
+					var path_writed = $(document.createElement('span')).html(response[0]['return'][2][1]);
 					
 					var response1 = $(document.createElement("span")).html(i18n.gettext("write_menu_pxe.response1"));
 					var response2 =  $(document.createElement("span")).html(i18n.gettext("write_menu_pxe.response2"));

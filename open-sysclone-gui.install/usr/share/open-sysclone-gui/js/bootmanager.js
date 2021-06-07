@@ -55,12 +55,12 @@ BootManager.prototype.BindLoginEventHandlers = function() {
 				methodName: 'nfs_export_stop',
 				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone",'imagenes'],
 				success: function(response,status,jqXHR){
-					result=response[0][0];
+					result=response[0]['return'][0];
 					if (result){
 						self.delete_menu_pxe();
 					}
 					else{
-						console.log("ha habido un error deteniendo el servicio de nfs",response[0]);
+						console.log("ha habido un error deteniendo el servicio de nfs",response[0]['return']);
 					}
 				},
 				error: function(jqXHR, status, error) {
@@ -81,8 +81,8 @@ BootManager.prototype.BindLoginEventHandlers = function() {
 					//vacio la variable que me informara del resultado
 					$('#result').empty();
 
-					result=response[0][0];
-					var test=response[0].length
+					result=response[0]['return'][0];
+					var test=response[0]['return'].length
 					if (result){
 						
 						//añado a la variable text la respuesta de N4D
@@ -92,7 +92,7 @@ BootManager.prototype.BindLoginEventHandlers = function() {
 							//Añado los valores al identificador que me mostrara la respuesta por pantalla
 							//Especificamos el tamaño de la imagen
 							img.attr('style',"width: 15px; height: 15px; margin: 5px;");
-							var pxe_path = $(document.createElement('span')).html(response[0][2][0]);
+							var pxe_path = $(document.createElement('span')).html(response[0]['return'][2][0]);
 							var text = $(document.createElement("span")).html(i18n.gettext("delete_pxe.ok"));
 							//Uno la imagen y el texto dentro del identificador de la web result
 							
@@ -112,7 +112,7 @@ BootManager.prototype.BindLoginEventHandlers = function() {
 						document.getElementById("result").className ="n4dresult";
 					}
 					else{
-						console.log("No se puede borrar la entrada",response[0]);
+						console.log("No se puede borrar la entrada",response[0]['return']);
 						var img = $(document.createElement('img')).attr('src','img/fail.png');
 						//Añado los valores al identificador que me mostrara la respuesta por pantalla
 						//Especificamos el tamaño de la imagen
@@ -124,7 +124,6 @@ BootManager.prototype.BindLoginEventHandlers = function() {
 						$('#result').append(text);
 						document.getElementById("result").className ="n4dresult";
 					}
-					
 				},
 				error: function(jqXHR, status, error) {
 					alert("Status: "+status+"\nError: N4d server is down"+error);

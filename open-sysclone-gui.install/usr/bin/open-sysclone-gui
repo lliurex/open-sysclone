@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/nw0.21 --password-store=basic /usr/share/open-sysclone-gui
+/usr/bin/nw0.30 --password-store=basic /usr/share/open-sysclone-gui

@@ -16,7 +16,7 @@ Description: n4d plugin for open-sysclone
 
 Package: open-sysclone-gui
 Architecture: all
-Depends: ${misc:Depends}, nwjs0.21, llx-bootmanager-gui, open-sysclone-rescue
+Depends: ${misc:Depends}, nwjs0.30, llx-bootmanager-gui, open-sysclone-rescue
 Description: open-sysclone gui
  Open-sysclone graphic user interface
 

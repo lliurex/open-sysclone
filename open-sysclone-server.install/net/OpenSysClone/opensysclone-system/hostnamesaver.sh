@@ -24,9 +24,18 @@ for f in $(ls -1 /dev/sda*); do
 		cp /mnt/test/etc/hosts	/tmp/hosts.old
 		echo
 		echo
-		sleep 5
 	fi
-	umount -l /mnt/test 
+	echo "Testing machine ID"
+	if [ -e /mnt/test/etc/machine-id  ]; then
+		echo "Machine ID Old: $(cat /mnt/test/etc/machine-id)"
+		chmod +w /mnt/test/etc/machine-id
+		cp /dev/null /mnt/test/etc/machine-id
+		echo "New MAchineID Valor: $(cat /mnt/test/etc/machine-id)"
+	else
+		echo "File not exists"
+	umount -l /mnt/test
+	sleep 5 
+	fi
 done
 
 
@@ -34,7 +43,7 @@ done
 # If not exits then generated it automagically (or almost)
 if [ ! -e /tmp/hostname.old ] ; then
 
-	NAME_END="$(ifconfig  | grep inet | cut -d ":"  -f2 | head -1| cut -d " " -f1| cut -d "." -f4)"
+	NAME_END="$(ifconfig  | grep inet | cut -d ":"  -f2 | head -1| awk -F " " '{print $2}' | cut -d "." -f 4)"
 	echo "client$NAME_END" > /tmp/hostname.old
 
 	cat <<EOF > /tmp/hosts.old

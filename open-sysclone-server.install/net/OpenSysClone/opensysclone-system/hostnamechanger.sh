@@ -2,7 +2,7 @@
 
 
 mkdir  -p /mnt/test
-NAME_END="$(ifconfig  | grep inet | cut -d ":"  -f2 | head -1| cut -d " " -f1| cut -d "." -f4)"
+NAME_END="$(ifconfig  | grep inet | cut -d ":"  -f2 | head -1| awk -F " " '{print $2}') | cut -d "." -f 4"
 
 
 for f in $(ls -1 /dev/sda*); do 

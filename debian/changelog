@@ -1,4 +1,4 @@
-open-sysclone (1.1) focal; urgency=medium
+open-sysclone (2.00) focal; urgency=medium
 
   * Fix bug in change name with Ip at the end.
 

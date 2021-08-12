@@ -20,6 +20,7 @@ EOF
 
 sed -e "s%_@_CLIENT_@_%client$NAME_END%g" -i /tmp/hosts.old
 echo
-echo
+echo "New Name in image restored:"
+cat /tmp/hostname.old
 sleep 5
 exit 0

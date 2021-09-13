@@ -3,7 +3,7 @@ echo
 echo
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 echo "Your files /etc/hosts & /etc/hostname are generated"
-NAME_END="$(ifconfig  | grep inet | cut -d ":"  -f2 | head -1| cut -d " " -f1| cut -d "." -f4)"
+NAME_END="$(ifconfig  | grep inet | cut -d ":"  -f2 | head -1| awk -F " " '{print $2}' | cut -d "." -f 4)"
 echo "client$NAME_END" > /tmp/hostname.old
 
 cat <<EOF > /tmp/hosts.old
@@ -20,6 +20,7 @@ EOF
 
 sed -e "s%_@_CLIENT_@_%client$NAME_END%g" -i /tmp/hosts.old
 echo
-echo
+echo "New Name in image restored:"
+cat /tmp/hostname.old
 sleep 5
 exit 0

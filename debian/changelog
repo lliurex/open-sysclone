@@ -1,3 +1,9 @@
+open-sysclone (1.07) bionic; urgency=medium
+
+  * Deleting json files for n4d config
+
+ -- Daniel Duran <daduve@gmail.com>  Tue, 14 Sep 2021 13:58:39 +0200
+
 open-sysclone (1.06) bionic; urgency=medium
 
   * Fix bug in change name with Ip at the end. 

@@ -1,0 +1,27 @@
+Source: open-sysclone
+Section: admin
+Priority: extra
+Maintainer: Equipo LliureX <lliurex@gva.es>
+Build-Depends: debhelper (>= 8.0.0), n4d-dev, llxsrchelper
+Standards-Version: 3.9.5
+Homepage: http://www.lliurex.net
+#Vcs-Svn: http://svn.lliurex.net/trusty/open-sysclone/trunk
+
+Package: open-sysclone-server
+Architecture: all
+Pre-depends: n4d
+Depends: ${misc:Depends} , llx-bootmanager, open-sysclone-system
+Description: n4d plugin for open-sysclone
+ n4d plugin to allow remote functions for open-sysclone
+
+Package: open-sysclone-gui
+Architecture: all
+Depends: ${misc:Depends}, nwjs0.21, llx-bootmanager-gui, open-sysclone-rescue
+Description: open-sysclone gui
+ Open-sysclone graphic user interface
+
+Package: open-sysclone-rescue
+Architecture: all
+Depends: ${misc:Depends}, n4d, udisks2
+Description: open-sysclone rescue
+ Open-sysclone files to rescue PXE boot loader

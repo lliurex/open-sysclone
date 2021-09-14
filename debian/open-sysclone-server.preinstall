@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+
+rm /etc/n4d/conf.d/OpenSysClone*.json

@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+   configure)
+   
+	
+	n4d-modules enable-plugin /etc/n4d/conf.d/OpenSysCloneExport || true
+	n4d-modules enable-plugin /etc/n4d/conf.d/OpenSysClone || true
+	n4d-modules enable-control OpenSysCloneExport || true
+	n4d-modules enable-control OpenSysClone || true
+   
+	
+   ;;
+
+   abort-upgrade|abort-remove|abort-deconfigure)
+   ;;
+
+   *)
+       exit 1
+   ;;
+esac
+
+#DEBHELPER#
+
+exit 0
+

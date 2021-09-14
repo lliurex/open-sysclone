@@ -4,9 +4,9 @@ set -e
 
 case "$1" in
 	install|upgrade)	
-		rm /etc/n4d/conf.d/OpenSysClone.json || true
-	        rm /etc/n4d/conf.d/OpenSysCloneRescue.json || true
-		rm /etc/n4d/conf.d/OpenSysCloneExport.json || true	
+		[ -f /etc/n4d/conf.d/OpenSysClone.json ] && rm /etc/n4d/conf.d/OpenSysClone.json
+		[ -f /etc/n4d/conf.d/OpenSysCloneRescue.json ] && rm /etc/n4d/conf.d/OpenSysCloneRescue.json
+		[ -f /etc/n4d/conf.d/OpenSysCloneExport.json ] && rm /etc/n4d/conf.d/OpenSysCloneExport.json
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)

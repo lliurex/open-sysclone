@@ -1,3 +1,9 @@
+open-sysclone (1.08) bionic; urgency=medium
+
+  * Deleting show errors in preinst 
+
+ -- Daniel Duran <daduve@gmail.com>  Tue, 14 Sep 2021 15:01:07 +0200
+
 open-sysclone (1.07) bionic; urgency=medium
 
   * Deleting json files for n4d config

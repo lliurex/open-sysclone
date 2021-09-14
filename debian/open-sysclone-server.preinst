@@ -4,7 +4,7 @@ set -e
 
 case "$1" in
 	install|upgrade)	
-		rm /etc/n4d/conf.d/OpenSysClone*.json 2>/dev/null
+		rm /etc/n4d/conf.d/OpenSysClone*.json >/dev/null
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)

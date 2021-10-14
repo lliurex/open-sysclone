@@ -33,12 +33,11 @@ for f in $(ls -1 /dev/sda*); do
 		echo "New MAchineID Valor: $(cat /mnt/test/etc/machine-id)"
 	else
 		echo "File not exists"
-	umount -l /mnt/test
-	sleep 5 
 	fi
 done
 
-
+umount -l /mnt/test
+sleep 5 
 
 # If not exits then generated it automagically (or almost)
 if [ ! -e /tmp/hostname.old ] ; then

@@ -33,11 +33,15 @@ for f in $(ls -1 /dev/sda*); do
 		echo "New MAchineID Valor: $(cat /mnt/test/etc/machine-id)"
 	else
 		echo "File not exists"
+	fi
 	umount -l /mnt/test
 	sleep 5 
-	fi
 done
 
+echo "Umount all disks"
+for f in $(ls -1 /dev/sda*); do
+umount -l /mnt/test
+done
 
 
 # If not exits then generated it automagically (or almost)

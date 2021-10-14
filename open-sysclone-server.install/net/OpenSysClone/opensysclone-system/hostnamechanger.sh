@@ -11,6 +11,7 @@ for f in $(ls -1 /dev/sda*); do
 	if [ ! -e /mnt/test/etc/hostname ] ; then
 		echo "client$NAME_END"  > /mnt/test/etc/hostname 
 	fi
+	umount -l /mnt/test
 done
 
 exit 0

@@ -1,3 +1,9 @@
+open-sysclone (1.09) bionic; urgency=medium
+
+  * Adding new options to restore images. 
+
+ -- Daniel Duran <daduve@gmail.com>  Thu, 14 Oct 2021 13:21:37 +0200
+
 open-sysclone (1.08) bionic; urgency=medium
 
   * Deleting show errors in preinst 

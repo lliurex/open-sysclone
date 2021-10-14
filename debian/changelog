@@ -1,3 +1,9 @@
+open-sysclone (2.02) focal; urgency=medium
+
+  * Adding new options in multicast mode 
+
+ -- Daniel Duran <daduve@gmail.com>  Thu, 14 Oct 2021 18:08:31 +0200
+
 open-sysclone (2.01) focal; urgency=medium
 
   * Delete obsolete values in eth configuration GRUB 

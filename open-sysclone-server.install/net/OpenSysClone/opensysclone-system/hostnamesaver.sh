@@ -34,10 +34,15 @@ for f in $(ls -1 /dev/sda*); do
 	else
 		echo "File not exists"
 	fi
+	umount -l /mnt/test
+	sleep 5 
 done
 
+echo "Umount all disks"
+for f in $(ls -1 /dev/sda*); do
 umount -l /mnt/test
-sleep 5 
+done
+
 
 # If not exits then generated it automagically (or almost)
 if [ ! -e /tmp/hostname.old ] ; then

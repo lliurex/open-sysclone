@@ -26,7 +26,8 @@ class OpenSysClone:
 	HOST_OPERATION="hostnamesaver.sh"
 	EXPORT_NFS_PATH="/etc/exports.d/"
 	EXPORT_NFS_NAME="opensysclone_nfs.exports"
-	
+	BASH_SCRIPTS=["testservermount","hostnamesaver","hostnamesaverip","hostnamerestore","hostnamechanger"]
+	BASH_SCRIPTS_DESTINATION="/net/OpenSysClone/opensysclone-system/"
 
 	def __init__(self):
 		pass
@@ -87,11 +88,40 @@ class OpenSysClone:
 			
 			# Copy unitaria
 			shutil.copy(filename,OpenSysClone.PXE_DESTINATION)
+
+			#Clonezillas Bash Scripts
+			for filename_bash in OpenSysClone.BASH_SCRIPTS:
+				path_to_work=tempfile.mkdtemp()
+				filename=path_to_work+filename_bash+".sh"
+
+				# Create temporal environment for jinja
+				env = Environment(loader=FileSystemLoader(OpenSysClone.TEMPLATES_PATH))
+				aux_bash_script_tpl=filename_bash+".tpl"
+				tmpl = env.get_template(aux_bash_script_tpl)
+
+				# Render the template with diferent values		
+				textrendered=tmpl.render(environment_variables)
+
+				#Create a temporal for nsswitch
+				tmp,filename=tempfile.mkstemp()
+				f = open(filename,'w')
+				f.writelines(textrendered)
+				f.close()
+
+				# Using the ultimate chmod
+				self.uchmod(filename,0644)
+				
+				# Copy unitaria
+				filename_dest=OpenSysClone.BASH_SCRIPTS_DESTINATION+filename_bash+".sh"
+				shutil.copy(filename,filename_dest)
+
+
+
 			COMMENT_END = "PXE menu is prepared with protocol %s for SQUASHFS, your requirements have writed in this file %s" %(protocolo,OpenSysClone.PXE_DESTINATION)
 			return [True,str(COMMENT_END),[protocolo,OpenSysClone.PXE_DESTINATION]]
 		
 		except Exception as e:
-
+			print(str(e))
 			return [False,str(e)]	
 	
 	

@@ -1,3 +1,9 @@
+open-sysclone (2.03) focal; urgency=medium
+
+  * Adding support to all HDD in bash_scripts 
+
+ -- Daniel Duran <daduve@gmail.com>  Thu, 21 Oct 2021 20:03:13 +0200
+
 open-sysclone (2.02) focal; urgency=medium
 
   * Adding new options in multicast mode 

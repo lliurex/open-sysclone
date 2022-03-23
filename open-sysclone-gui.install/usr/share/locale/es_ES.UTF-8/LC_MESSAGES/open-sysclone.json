@@ -31,6 +31,18 @@
     "message":"Reiniciar",
     "description":""
   },
+    "test_disk":{
+    "message":"Test de disco",
+    "description":"Test de disco"
+  },
+    "yes":{
+    "message":"si",
+    "description":"si"
+  },
+    "no":{
+    "message":"no",
+    "description":"no"
+  },
     "done":{
     "message":"Realizar",
     "description":""

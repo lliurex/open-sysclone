@@ -27,6 +27,18 @@
     "message":"Reboot",
     "description":"Reboot"
   },
+    "test_disk":{
+    "message":"testdisk",
+    "description":"testdisk"
+  },
+    "yes":{
+    "message":"yes",
+    "description":"yes"
+  },
+    "no":{
+    "message":"no",
+    "description":"no"
+  },
     "done":{
     "message":"Done",
     "description":"Done"

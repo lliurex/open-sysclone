@@ -22,6 +22,7 @@ function MakeImageManager(){
 		var imgname = $("#imgname").val();
 		var imagehdd = $("#imagehdd").val();
 		var finaloperation = $("#finaloperation").val();
+		var testdisk = $("#testdisk").val();
 		var pathfile = 'imagenes';
 		if (imgname === ""){
 			console.log("Falta el nombre");
@@ -78,7 +79,7 @@ function MakeImageManager(){
 					
 					result=response[0][0];
 					if (result){
-						self.nfs_export_start(imgname,imagehdd,finaloperation,pathfile);
+						self.nfs_export_start(imgname,imagehdd,finaloperation,testdisk,pathfile);
 					}
 					else{
 						console.log("ha habido un error en la primera",response[0]);
@@ -92,7 +93,7 @@ function MakeImageManager(){
 	}
 
 
-	this.nfs_export_start = function (imgnamer,imagehddr,finaloperationr,pathfilen){
+	this.nfs_export_start = function (imgnamer,imagehddr,finaloperationr,testdiskr,pathfilen){
 
 		$.xmlrpc({
 				url: 'https://'+sessionStorage.server+':9779',
@@ -101,7 +102,7 @@ function MakeImageManager(){
 				success: function(response,status,jqXHR){
 					result=response[0][0];
 					if (result){
-						self.write_menu_pxe(imgnamer,imagehddr,finaloperationr,pathfilen);
+						self.write_menu_pxe(imgnamer,imagehddr,finaloperationr,testdiskr,pathfilen);
 					}
 					else{
 						console.log("ha habido un error en la primera",response[0]);
@@ -115,12 +116,12 @@ function MakeImageManager(){
 
 	}
 
-	this.write_menu_pxe = function (name,hdd,finaloperations,pathfiles){
+	this.write_menu_pxe = function (name,hdd,finaloperations,testdisk,pathfiles){
 		
 		$.xmlrpc({
 				url: 'https://'+sessionStorage.server+':9779',
 				methodName: 'write_menu_pxe',
-				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone",'SaveImage.tpl',pathfiles,name,hdd,finaloperations],
+				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone",'SaveImage.tpl',pathfiles,name,hdd,finaloperations,testdisk],
 				success: function(response,status,jqXHR){
 					//vacio la variable que me informara del resultado
 					$('#result').empty();

@@ -27,6 +27,18 @@
     "message":"Reinicia",
     "description":"Reboot"
   },
+    "test_disk":{
+    "message":"Test de disc",
+    "description":"Test de disc"
+  },
+    "yes":{
+    "message":"si",
+    "description":"si"
+  },
+    "no":{
+    "message":"no",
+    "description":"no"
+  },
     "done":{
     "message":"Fet",
     "description":"Done"

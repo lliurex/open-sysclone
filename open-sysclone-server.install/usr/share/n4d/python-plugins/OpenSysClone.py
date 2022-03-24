@@ -27,6 +27,7 @@ class OpenSysClone:
 	UDP_PATH="/net/OpenSysClone/prueba"
 	INTERFACE="eth0"
 	HOST_OPERATION="hostnamesaver.sh"
+	TEST_DISK='yes'
 	EXPORT_NFS_PATH="/etc/exports.d/"
 	EXPORT_NFS_NAME="opensysclone_nfs.exports"
 	BASH_SCRIPTS=["testservermount","hostnamesaver","hostnamesaverip","hostnamerestore","hostnamechanger"]
@@ -43,7 +44,7 @@ class OpenSysClone:
 
 	#def startup
 
-	def write_menu_pxe(self, aux_save_image_tpl=SAVE_IMAGE_TPL, aux_user_path_file = USER_PATH_FILE, aux_name_file = NAME_FILE , aux_hdd_disk = HDD_DISK ,aux_final_action=FINAL_ACTION, aux_host_operation=HOST_OPERATION):
+	def write_menu_pxe(self, aux_save_image_tpl=SAVE_IMAGE_TPL, aux_user_path_file = USER_PATH_FILE, aux_name_file = NAME_FILE , aux_hdd_disk = HDD_DISK ,aux_final_action=FINAL_ACTION,aux_testdisk=TEST_DISK, aux_host_operation=HOST_OPERATION):
 			
 		try:	
 
@@ -68,6 +69,11 @@ class OpenSysClone:
 				path_squashfs="ipxeboot/opensysclone-system"
 			else:
 				path_squashfs="opensysclone-system"
+
+			if aux_testdisk=="yes":
+				path_testdisk="-fsck-src-part-y"
+			else:
+				path_testdisk=""
 			
 			environment_variables["PATH_SQUASHFS"]=path_squashfs
 			environment_variables["PATH_FILE"]=aux_path_file
@@ -77,6 +83,7 @@ class OpenSysClone:
 			environment_variables["HOST_OPERATION"]=aux_host_operation
 			environment_variables["OPENSYSCLONE_SQUASHFS_PROTOCOL"]=protocolo
 			environment_variables["SRV_IP"]=INTERNAL_NETWORK_VARIABLES['SRV_IP']
+			environment_variables["TEST_DISK"]=path_testdisk
 			
 			path_to_work=tempfile.mkdtemp()
 			filename=path_to_work+"OpenSysClone.pxe"

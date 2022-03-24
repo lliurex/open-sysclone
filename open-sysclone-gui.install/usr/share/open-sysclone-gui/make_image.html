@@ -50,7 +50,17 @@
 						<label><script type="text/javascript">document.write(i18n.gettext("final_operation"));</script> <img src="img/question.png" height="15px" width="15" title="When Open-SysClone ends the operations it can shutdown the computer or reboot it."/></label>
 						<!-- <label><script type="text/javascript">document.write(i18n.gettext("final_operation"));</script> <img src="img/question.png" height="15px" width="15" title="When Open-SysClone ends the operations it can shutdown the computer or reboot it."/></label> -->
 					</div>
-					
+					<div class="group">
+						<div class="custom-select" style="width:220px;">
+							<select required="required" name="testdisk" id="testdisk">
+								<option value="yes"><script type="text/javascript">document.write(i18n.gettext("yes"));</script></option>
+								<option value="yes"><script type="text/javascript">document.write(i18n.gettext("yes"));</script></option>
+								<option value="no"><script type="text/javascript">document.write(i18n.gettext("no"));</script></option>
+							</select>
+							<label><script type="text/javascript">document.write(i18n.gettext("test_disk"));</script> <img src="img/question.png" height="15px" width="15" title="Open-SysClone test disk with fsck method, if you have GPT partition or windows select NO."/></label>
+							<!-- <label><script type="text/javascript">document.write(i18n.gettext("final_operation"));</script> <img src="img/question.png" height="15px" width="15" title="When Open-SysClone ends the operations it can shutdown the computer or reboot it."/></label> -->
+						</div>
+					</div>
 				</div>
 				<!--Botones de regreso y de opciones avanzadas-->
 				<div class="align-right">

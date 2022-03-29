@@ -25,15 +25,6 @@ for f in $(ls -1 /dev/{{ HDD_DISK }}*); do
 		echo
 		echo
 	fi
-	echo "Testing machine ID"
-	if [ -e /mnt/test/etc/machine-id  ]; then
-		echo "Machine ID Old: $(cat /mnt/test/etc/machine-id)"
-		chmod +w /mnt/test/etc/machine-id
-		cp /dev/null /mnt/test/etc/machine-id
-		echo "New MAchineID Valor: $(cat /mnt/test/etc/machine-id)"
-	else
-		echo "File not exists"
-	fi
 	umount -l /mnt/test
 	sleep 5 
 done

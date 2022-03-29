@@ -1,6 +1,8 @@
 open-sysclone (1.11) bionic; urgency=medium
 
-  * Adding support to do not check disk 
+  * Adding support to do not check disk
+  * Only works with new open-sysclone-system 0.60.2 or more
+  * Bug in final operation solved 
 
  -- Daniel Duran <daduve@gmail.com>  Wed, 23 Mar 2022 18:40:14 +0100
 

@@ -21,6 +21,3 @@ $MenuEntryListObject=$MenuEntryList;
 
 
 ?>
-
-
-

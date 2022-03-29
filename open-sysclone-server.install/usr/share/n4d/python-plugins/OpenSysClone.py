@@ -40,7 +40,7 @@ class OpenSysClone:
 
 	#def startup
 
-	def write_menu_pxe(self, aux_save_image_tpl=SAVE_IMAGE_TPL, aux_user_path_file = USER_PATH_FILE, aux_name_file = NAME_FILE , aux_hdd_disk = HDD_DISK ,aux_final_action=FINAL_ACTION,aux_testdisk=TEST_DISK, aux_host_operation=HOST_OPERATION):
+	def write_menu_pxe(self, aux_save_image_tpl=SAVE_IMAGE_TPL, aux_user_path_file = USER_PATH_FILE, aux_name_file = NAME_FILE , aux_hdd_disk = HDD_DISK ,aux_final_action=FINAL_ACTION,aux_host_operation=HOST_OPERATION,aux_testdisk=TEST_DISK):
 			
 		try:	
 			# save_path, name_file, hdd_disk, final_action

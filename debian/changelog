@@ -1,3 +1,9 @@
+open-sysclone (2.05) focal; urgency=medium
+
+  * Adding missing files 
+
+ -- Daniel Duran <daduve@gmail.com>  Wed, 13 Apr 2022 12:57:09 +0200
+
 open-sysclone (2.04) focal; urgency=medium
 
   * Adding support to do not check disk

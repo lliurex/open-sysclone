@@ -1,3 +1,9 @@
+open-sysclone (2.06) bionic; urgency=medium
+
+  * Adding missing files 
+
+ -- Daniel Duran <daduve@gmail.com>  Wed, 13 Apr 2022 13:57:51 +0200
+
 open-sysclone (1.11) bionic; urgency=medium
 
   * Adding support to do not check disk

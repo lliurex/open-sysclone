@@ -1,3 +1,9 @@
+open-sysclone (2.07) focal; urgency=medium
+
+  * Template saveimage options modified
+
+ -- Daniel Duran <daduve@gmail.com>  Tue, 21 Jun 2022 17:21:20 +0200
+
 open-sysclone (2.06) focal; urgency=medium
 
   * Adding missing files 

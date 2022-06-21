@@ -1,3 +1,9 @@
+open-sysclone (2.08) bionic; urgency=medium
+
+  * New restore values in template 
+
+ -- Daniel Duran <daduve@gmail.com>  Tue, 21 Jun 2022 20:39:53 +0200
+
 open-sysclone (2.07) bionic; urgency=medium
 
   * New saveimage values in template 

@@ -23,7 +23,7 @@ class OpenSysClone:
 	MAX_WAIT = "100"
 	UDP_PATH="/net/OpenSysClone/prueba"
 	INTERFACE="eth0"
-	TEST_DISK='yes'
+	TEST_DISK='no'
 	HOST_OPERATION="hostnamesaver.sh"
 	EXPORT_NFS_PATH="/etc/exports.d/"
 	EXPORT_NFS_NAME="opensysclone_nfs.exports"
@@ -62,7 +62,7 @@ class OpenSysClone:
 				if aux_testdisk=="yes":
 					path_testdisk="-fsck-src-part-y"
 				else:
-					path_testdisk=""
+					path_testdisk="-sfsck"
 			
 			
 			environment_variables["PATH_SQUASHFS"]=path_squashfs

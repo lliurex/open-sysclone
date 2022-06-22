@@ -1,3 +1,10 @@
+open-sysclone (2.09) bionic; urgency=medium
+
+  * New values in template options
+  * No test disk in prefered option 
+
+ -- Daniel Duran <daduve@gmail.com>  Wed, 22 Jun 2022 12:05:53 +0200
+
 open-sysclone (2.08) bionic; urgency=medium
 
   * New restore values in template 

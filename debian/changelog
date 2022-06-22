@@ -1,3 +1,10 @@
+open-sysclone (2.09) focal; urgency=medium
+
+  * Adding -j2 option to templates
+  * Cancel test disk by default 
+
+ -- Daniel Duran <daduve@gmail.com>  Wed, 22 Jun 2022 23:01:16 +0200
+
 open-sysclone (2.08) focal; urgency=medium
 
   * New restore values in template 

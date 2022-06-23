@@ -51,6 +51,7 @@ function RestoreImageManager(){
 		var imagehdd = $("#imagehdd").val();
 		var finaloperation = $("#finaloperation").val();
 		var hostoperation = $("#hostoperation").val();
+		var testdisk = '-sfsck';
 		document.getElementById("result").className ="n4dresult_erase";
 
 		if (!imgname){
@@ -105,7 +106,7 @@ function RestoreImageManager(){
 				success: function(response,status,jqXHR){
 					result=response[0]['return'][0];
 					if (result){
-						self.write_menu_pxe(imgname,imagehdd,finaloperation,hostoperation);
+						self.write_menu_pxe(imgname,imagehdd,finaloperation,testdisk,hostoperation);
 					}
 					else{
 						console.log("ha habido un error en la primera",response[0]['return']);
@@ -119,12 +120,12 @@ function RestoreImageManager(){
 
 	}
 
-	this.write_menu_pxe = function (name,hdd,finaloperation,hostoperation){
+	this.write_menu_pxe = function (name,hdd,finaloperation,testdisk,hostoperation){
 		var pathfile = 'imagenes';
 		$.xmlrpc({
 				url: 'https://'+sessionStorage.server+':9779',
 				methodName: 'write_menu_pxe',
-				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone",'RestoreImageUnicast.tpl',pathfile,name,hdd,finaloperation,hostoperation],
+				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone",'RestoreImageUnicast.tpl',pathfile,name,hdd,finaloperation,testdisk,hostoperation],
 				success: function(response,status,jqXHR){
 					//vacio la variable que me informara del resultado
 					$('#result').empty();

@@ -74,6 +74,7 @@ function RestoreImageManagerMulticast(){
 		var timemax = $("#timemax").val();
 		var pathfile = 'imagenes';
 		var hostoperation = $("#hostoperation").val();
+		var testdisk = '-sfsck';
 
 		console.log("Valores de las variables al inicio del programa ",imgname,imagehdd,finaloperation,clientswait,timemax,pathfile);
 
@@ -167,7 +168,7 @@ function RestoreImageManagerMulticast(){
 					result=response[0]['return'][0];
 					if (result){
 						console.log("Valores de las variables dentro del primer if ",imgname,imagehdd,finaloperation,clientswait,timemax);
-						self.write_menu_pxe(imgname,imagehdd,finaloperation,clientswait,timemax,hostoperation);
+						self.write_menu_pxe(imgname,imagehdd,finaloperation,clientswait,timemax,testdisk,hostoperation);
 					}
 					else{
 						console.log("ha habido un error en la primera",response[0]['return']);
@@ -184,7 +185,7 @@ function RestoreImageManagerMulticast(){
 
 	/*This function call n4d in server for RestoreImageMulticast method*/
 	
-	this.write_menu_pxe = function (name,hdd,finaloperation,clientsw,timer,hostoperation){
+	this.write_menu_pxe = function (name,hdd,finaloperation,clientsw,timer,testdisk,hostoperation){
 		
 		/*by defect OpenSysClone work in /net/OpenSysClone/imagenes, defined /net/OpenSysClone in n4d_python_plugins and pathfile=imagenes*/
 		var pathfile = 'imagenes';
@@ -192,7 +193,7 @@ function RestoreImageManagerMulticast(){
 		$.xmlrpc({
 				url: 'https://'+sessionStorage.server+':9779',
 				methodName: 'write_menu_pxe',
-				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone",'RestoreImageMulticast.tpl',pathfile,name,hdd,finaloperation,hostoperation],
+				params: [[sessionStorage.username , sessionStorage.password],"OpenSysClone",'RestoreImageMulticast.tpl',pathfile,name,hdd,finaloperation,testdisk,hostoperation],
 				success: function(response,status,jqXHR){
 					result=response[0]['return'][0];
 					if (result){

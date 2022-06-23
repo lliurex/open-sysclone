@@ -3,7 +3,7 @@ echo
 echo
 echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 echo "Your files /etc/hosts & /etc/hostname are generated"
-NAME_END="$(ifconfig  | grep inet | cut -d ":"  -f2 | head -1| awk -F " " '{print $2}' | cut -d "." -f 4)"
+NAME_END="$(ifconfig  | grep inet | cut -d ":"  -f2 | head -1| awk -F " " '{print $2}' | cut -d "." -f 4 | head -n 1)"
 echo "client$NAME_END" > /tmp/hostname.old
 
 cat <<EOF > /tmp/hosts.old

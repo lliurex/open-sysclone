@@ -1,3 +1,9 @@
+open-sysclone (2.10) focal; urgency=medium
+
+  * Fix bug in hostname operation 
+
+ -- Daniel Duran <daduve@gmail.com>  Thu, 23 Jun 2022 19:06:13 +0200
+
 open-sysclone (2.09) focal; urgency=medium
 
   * Adding -j2 option to templates

@@ -129,7 +129,7 @@ class OpenSysCloneExport:
 			environment_variables["NAME_ISO"] = name
 			environment_variables["EXPORT_PATH"]= self.tftppath
 			environment_variables["TFTP_PATH"] = os.path.join(self.tftppath,'casper','vmlinuz')
-			environment_variables["VMLINUZ_PATH"]= os.path.join('OpenSysClone','casper','vmlinuz')
+			environment_variables["VMLINUZ_PATH"]= os.path.join('OpenSysCloneExport','casper','vmlinuz')
 			#os.system('ls "%s" | grep initrd'%(self.tftppath+"/"+"casper"))
 			#buscamos el initrd dentro del directorio tenga la extension que tenga
 			
@@ -138,7 +138,7 @@ class OpenSysCloneExport:
 			print ("El initrd encontrado es: %s"%INITRD)
 			
 			#POR DEFECTO EL INITRD QUE SE VA A USAR ES EL PRIMERO DE LA LIST ENCONTRADO
-			environment_variables["INITRD_PATH"] = os.path.join('OpenSysClone','casper',INITRD[ 0 ])
+			environment_variables["INITRD_PATH"] = os.path.join('OpenSysCloneExport','casper',INITRD[ 0 ])
 			
 			# Create temporal environment for jinja
 			env = Environment(loader=FileSystemLoader(self.templates_path))

@@ -1,7 +1,8 @@
 open-sysclone (2.13) jammy; urgency=medium
 
   * fix BUG in export image
-  * First version jammy 
+  * First version jammy
+  * Set http valor defect to squashfs
 
  -- Daniel Duran <daduve@gmail.com>  Fri, 11 Aug 2023 13:20:03 +0200
 

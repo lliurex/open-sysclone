@@ -6,7 +6,7 @@ function MainManager(){
 MainManager.prototype.BindLoginEventHandlers = function(){
 
 //check and save protocol variable for TFTP or HTTP and init it
-var protocol = "tftp";
+var protocol = "http";
 //alert ('Voy a inicializar la variable')
 
 $.xmlrpc({
